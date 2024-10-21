@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>THE LIBRARY OF BABEL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./main.css"> <!-- Add link to main.css -->
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-title">THE LIBRARY OF BABEL</div>
+        <div class="filter-links">
+            <ul>
+                <li><a href="../index.html?filter=all" class="filter-btn" data-filter="all">SELECTED</a></li>
+                <li><a href="../index.html?filter=category1" class="filter-btn" data-filter="category1">PRINT</a></li>
+                <li><a href="../index.html?filter=category1" class="current-page filter-btn" data-filter="category2">WEBSITES</a></li>
+                <li><a href="../index.html?filter=category3" class="filter-btn" data-filter="category3">3D</a></li>
+                <li><a href="../ARCHIVE/index.html">ARCHIVE</a></li>
+            </ul>
+        </div>        
+
+        <div class="right-links">
+            <li><span class="current-page">WORK</span></li>
+            <li><a href="../ABOUT/index.html" class="ABOUT">KATELYN LEE</a></li>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="hero-image">
+            <img src="./assets/characters.png" alt="Hero image">
+        </div>
+        <div class="heading">
+            <div class="TITLE"><p>THE LIBRARY OF BABEL</p></div>
+            <div class="archiving">
+                <ul>
+                    <li><span class="label">YEAR:</span><span class="value"><br>2024</span></li>
+                    <li><span class="label">ROLE:</span><span class="value"><br>WEB DESIGNER / DEVELOPER</span></li>
+                    <li><span class="label">SKILLS:</span><span class="value"><br>HTML, CSS, JS</span></li>
+                </ul>
+            </div>            
+        </div>
+        <div class="content">
+            <div class="project-story">
+                A visualization of THE LIBRARY OF BABEL by Jorge Luis Borges, this website takes aesthetic and conceptual inspiration from the mythical library central to the short story.
+                Each page is different and represents a "book" from the library.
+                </p>
+
+                <div class="website-link">
+                    <br><br>
+                    <p>Take a look here!</p>
+                    <ul> <!-- Added unordered list -->
+                        <li><a href="https://ketalyn.github.io/The-Library-of-Babel/" target="_blank" rel="noopener noreferrer">https://ketalyn.github.io/The-Library-of-Babel/</a></li>
+                    </ul> <!-- End of unordered list -->
+                    <p>
+                </div>
+            </div>
+        
+            <div class="flipthrough">
+                <img src="./assets/laptop_library.png" alt="spreads flipthrough">
+                <video autoplay muted loop class="overlay-video">
+                    <source src="./assets/homepage.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+        </div>        
+
+        <div class="QR">
+            <div class="QR-guide">
+                <p>Some pages from the library
+                </p>
+            </div>
+            <div class="static-gallery">
+                <img src="./assets/mobile.png" alt="mobile" class="gallery-img">
+                <img src="./assets/phone_frame.png" alt="phone frame" class="overlay-phone">
+            </div>
+
+            <div class="phones">
+                <div class="phone-container">
+                    <img src="./assets/the universe.png" alt="the universe" class="the universe">              
+                </div>
+            </div>
+        </div>
+
+        <!-- Spreads Grid -->
+        <div class="spreads-grid">
+            <div class="grid-item" data-index="0">
+                <img src="./assets/ab aeterno.png" alt="spread 1">
+            </div>
+            <div class="grid-item" data-index="1">
+                <img src="./assets/unique.png" alt="spread 2">
+            </div>
+            <div class="grid-item" data-index="2">
+                <img src="./assets/characters.png" alt="spread 3">
+            </div>
+            <div class="grid-item" data-index="3">
+                <img src="./assets/cyclical.png" alt="spread 4">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal for the gallery -->
+    <div id="galleryModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>    
+
+<div class="footer">
+    <div class="connect-links">
+        <ul>
+            <li><a href="https://www.instagram.com/ketalyn.lee" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></li>
+            <li><a href="mailto:katelyn.lee010@gmail.com">EMAIL</a></li>
+            <li><a href="https://www.linkedin.com/in/katelyn-lee-5b85a5261" target="_blank">LINKEDIN</a></li>
+            <li><a href="../ABOUT/assets/Resume.pdf" target="_blank">RESUME</a></li>
+        </ul>
+    </div>
+
+    <p>Designed and coded by Katelyn Lee</p>
+    <P>Copyright © 2024 Katelyn Lee. All rights reserved.</P>
+</div>
+
+    <!-- Load your bundled JavaScript file -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

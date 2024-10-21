@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WIENER DOG HALL OF FAME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./main.css"> <!-- Add link to main.css -->
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-title">WIENER DOG HALL OF FAME</div>
+        <div class="filter-links">
+            <ul>
+                <li><a href="../../index.html" class="ABOUT">SELECTED</a></li>
+                <li><span class="current-page">ARCHIVE</span></li>
+            </ul>
+        </div>
+    
+        <div class="right-links">
+            <li><span class="current-page">WORK</span></li>
+            <li><a href="../ABOUT/index.html" class="ABOUT">KATELYN LEE</a></li>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="hero-image">
+            <img src="./assets/hero_image.png" alt="Hero image">
+        </div>
+        <div class="heading">
+            <div class="TITLE"><p>WIENER DOG <br> HALL OF FAME</p></div>
+            <div class="archiving">
+                <ul>
+                    <li><span class="label">YEAR:</span><span class="value"><br>2023</span></li>
+                    <li><span class="label">ROLE:</span><span class="value"><br>ILLUSTRATOR</span></li>
+                    <li><span class="label">SKILLS:</span><span class="value"><br>PHOTOSHOP, PAINTING</span></li>
+                </ul>
+            </div>            
+        </div>
+        <div class="content">
+            <div class="project-story">
+                <p>
+                    Digital illustrations for the Wiener Dog Hall of Fame at the 2023 Wiener Nationals, hosted by Wienerschnitzel.
+                    Completed during summer 2023 INNOCEAN INNternship as Creative Intern.
+                </p>
+            </div>
+        
+        </div>
+
+        <div class="QR">
+            <div class="static-gallery">
+                <img src="./assets/wienerschnitzel/buddyblack2.png" alt="Image 1" class="gallery-img">
+                <img src="./assets/wienerschnitzel/finn2.png" alt="Image 2" class="gallery-img">
+                <img src="./assets/wienerschnitzel/pennylane2.png" alt="Image 3" class="gallery-img">
+                <img src="./assets/wienerschnitzel/princesssmoochygucci2.png" alt="Image 4" class="gallery-img">
+                
+                <!-- Always visible controls -->
+                <div class="gallery-controls">
+                    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+                    <span class="next" onclick="changeImage(1)">&#10095;</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal for the gallery -->
+    <div id="galleryModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>    
+
+<div class="footer">
+    <div class="connect-links">
+        <ul>
+            <li><a href="https://www.instagram.com/ketalyn.lee" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></li>
+            <li><a href="mailto:katelyn.lee010@gmail.com">EMAIL</a></li>
+            <li><a href="https://www.linkedin.com/in/katelyn-lee-5b85a5261" target="_blank">LINKEDIN</a></li>
+        </ul>
+    </div>
+
+    <p>Designed and coded by Katelyn Lee</p>
+    <P>Copyright © 2024 Katelyn Lee. All rights reserved.</P>
+</div>
+
+    <!-- Load your bundled JavaScript file -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

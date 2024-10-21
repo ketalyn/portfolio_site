@@ -1,0 +1,1308 @@
+@font-face {
+    font-family: 'MyFont'; /* Give your font a name */
+    src: url('./assets/Myfont-Regular.otf') format('otf'),
+         url('./assets/Myfont-Regular.ttf') format('ttf'); /* Add other formats if available */
+    font-weight: normal; /* Specify the font weight (normal, bold, etc.) */
+    font-style: normal; /* Specify the font style (normal, italic, etc.) */
+}
+
+
+/* General body styling */
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    color: rgb(144, 144, 144);
+    padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+    z-index: 1000; /* Ensure the navbar stays on top */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out the items */
+}
+
+.navbar-title{
+    color: rgb(144, 144, 144);
+    font-size: 1rem;
+    display: flex; /* Use flexbox for right links */
+    margin-right: auto; /* Push to the far right */
+    margin-left: 1.5rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    color: rgb(144, 144, 144);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin-left:-1rem;
+}
+
+.navbar ul li a:hover {
+    color:#ffffff;
+}
+
+/* Center filter links */
+.filter-btn {
+    flex-grow: 1; /* Allow this section to grow and take remaining space */
+    display: flex; /* Use flexbox for alignment */
+    margin-left: 3%;
+    justify-content: center; /* Center items horizontally */
+}
+
+.filter-btn ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.filter-links li {
+    margin-left: 0 0rem; /* Space between the filter links */
+    position: relative;
+}
+
+.filter-links ul li a{
+    margin-left:0rem;
+}
+
+.filter-links .current-page{
+    color:#ffffff;
+    font-size: 1rem;
+}
+
+.filter-links li:not(:last-child)::after {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    right: -0.8rem; /* Position to the right of the list item */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    height: 20px; /* Adjust height of the line */
+    width: 1px; /* Width of the line */
+    background-color: rgb(144, 144, 144); /* Line color */
+}
+
+.ABOUT {
+    font-size: 1.2rem;
+}
+
+/* Styles for the active page */
+.navbar ul li a.active {
+    color: white; /* Active link color */
+}
+
+.navbar ul li a:hover {
+    color: #ffffff;
+}
+
+/* Align right links */
+.right-links {
+    display: flex; /* Use flexbox for right links */
+    margin-left: auto; /* Push to the far right */
+    margin-right: 3.2rem;
+    list-style-type: none;
+}
+
+.right-links ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.right-links li {
+    margin-left: 1rem; /* Space between the right links */
+}
+
+.right-links li a {
+    color: rgb(144, 144, 144);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    list-style-type: none;
+}
+
+.right-links li a:hover{
+    color:#ffffff;
+}
+
+.current-page{
+    color:#ffffff;
+    font-size: 1rem;
+}
+
+/* Main content */
+main {
+    position: relative; /* This allows absolute positioning for child elements */
+    margin-top: 4.6rem; 
+    display: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    height: 82vh;
+    background-color:none;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.hero-image {
+    background-color: #ffffff;
+    width: 100%; /* Full width */
+    height: 20rem; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    overflow: hidden; /* Hide overflow */
+}
+
+.hero-image img {
+    max-width: 100%; /* Limit image width to container's width */
+    max-height: 100%; /* Limit image height to container's height */
+    width: 100%; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.heading{
+    display:flex;
+    height:10%;
+}
+
+.TITLE{
+    color:#ffffff;
+    background-color: none;
+    font-size: 4rem;
+    text-align: left;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+    width:50%;
+}
+
+.TITLE p{
+    margin-top:-0.5rem;
+    margin-bottom:2.5rem;
+}
+
+.archiving {
+    background-color: none;
+    text-decoration: none;
+    width: 40%;
+    margin-left: 5%;
+}
+
+.archiving ul {
+    list-style-type: none !important; /* Use !important to ensure it overrides any other styles */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for layout */
+}
+
+.archiving ul li {
+    margin: 0 4rem;
+    margin-top: 2rem;
+    margin-left: 0rem;
+    background-color: none;
+    width: 15rem;
+    color: rgb(144, 144, 144); /* This is for the labels */
+}
+
+.archiving ul li:last-child {
+    margin-right: 0; /* Correct syntax for the last-child pseudo-class */
+}
+
+.archiving ul li a {
+    color: rgb(144, 144, 144);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-left: -1rem;
+}
+
+.archiving .value {
+    color: white; /* Set the color of the values to white */
+}
+
+.archiving .label {
+    color: rgb(144, 144, 144); /* Keep the label color as is */
+}
+
+
+.project-story{
+    background-color: none;
+    color:white;
+    width:49%;
+    height: 40vh;
+    margin-left: 2.5rem;
+    margin-top: 1rem;
+}
+
+.project-story p{
+    margin-top:0;
+}
+
+.flipthrough{
+    width: 40%;
+    margin-left:6%;
+    margin-top: 1%;
+    background-color: cornflowerblue;
+    height: 40vh;
+}
+
+.flipthrough img{
+      max-width: 100%; /* Limit image width to container's width */
+    max-height: 100%; /* Limit image height to container's height */
+    width: 100%; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.front-cover {
+    width: 15vw; 
+    height: auto; 
+    margin-left: 2.5rem;
+    background-color: antiquewhite;
+    overflow: hidden;
+    padding: 0; 
+    border: none; 
+    position: absolute; /* Make it position absolute */
+    top: 40%; /* Adjust based on where you want it to start */
+    left: 10%; /* Adjust to control horizontal placement */
+    transform: rotate(-10deg); /* Adjust angle as needed */
+    z-index: 2; /* Ensure it overlaps */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add drop shadow */
+}
+
+.front-cover img {
+    width: 100%; 
+    height: auto;
+    max-height: 100%; 
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.spread-5 {
+    width: 30vw; 
+    height: auto; 
+    margin-left: 2.5rem;
+    background-color: antiquewhite;
+    overflow: hidden;
+    padding: 0; 
+    border: none; 
+    position: absolute; /* Make it position absolute */
+    top: 40%; /* Adjust based on where you want it to start */
+    left: 15%; /* Adjust to control horizontal placement */
+    transform: rotate(-10deg); /* Adjust angle as needed */
+    z-index: 1; /* Ensure it overlaps */
+}
+
+.spread-5 img {
+    width: 100%; 
+    height: auto;
+    max-height: 100%; 
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.grid-directions {
+    width: 35%;
+    height: 10vh;
+    color: rgb(255, 255, 255);
+    position: absolute; /* Make it overlap content */
+    top: 47%; /* Adjust to control vertical placement */
+    left: 62%; /* Adjust to control horizontal placement */
+    z-index: 2; /* Ensure it overlaps other content */
+    font-family: 'MyFont';
+    transform: rotate(10deg); /* Adjust angle as needed */
+    font-size: 4rem;
+    line-height:3rem;
+}
+
+.grid-directions p {
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove padding if necessary */
+}
+
+.arrow{
+    width: 8.5vw;
+    height: auto;
+    color: aliceblue;
+    position: absolute; /* Make it overlap content */
+    top: 52%; /* Adjust to control vertical placement */
+    left: 65%; /* Adjust to control horizontal placement */
+    z-index: 2; /* Ensure it overlaps other content */
+    transform: rotate(-5deg); /* Adjust angle as needed */
+    font-size: 4rem;
+}
+
+.arrow img {
+    width:100%;
+    height:auto;
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove padding if necessary */
+}
+
+.spreads-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 96%; /* Adjust to your desired width */
+    max-width: 100%; /* Set a max width for larger screens */
+    margin: 0 auto; /* Center the grid horizontally */
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.grid-item {
+    background-color: #ffffff;
+    padding: 0;
+    height: 14.5rem; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    overflow: hidden; /* Hide overflow */
+    cursor: pointer;
+}
+
+.grid-item img {
+    max-width: 100%; /* Limit image width to container's width */
+    max-height: 100%; /* Limit image height to container's height */
+    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Fill the height of the container */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal img {
+    max-width: 90%; /* Max width of the image */
+    max-height: 90%; /* Max height of the image */
+    margin-top:3%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+}
+
+/* Modal Image */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Adjust modal-nav for proper alignment */
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px; /* Ensures some padding on the sides */
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 50px; /* Larger arrow icons */
+    color: white;
+    user-select: none; /* Prevent selection */
+}
+
+.prev {
+    position: absolute;
+    left: 20px; /* Move to the left side */
+}
+
+.next {
+    position: absolute;
+    right: 20px; /* Move to the right side */
+}
+
+.prev:hover, .next:hover {
+    color: #bbb; /* Lighter color on hover */
+}
+
+.footer {
+    height: 10rem;
+    width: 100%;
+    background-color: black;
+    bottom: 0;
+    margin-top: 2rem;
+    color: rgb(144, 144, 144);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect-links {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.connect-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem; /* Use gap for spacing */
+}
+
+.connect-links li a {
+    color: rgb(144, 144, 144);
+    transition: color 0.3s ease;
+}
+
+.connect-links li a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }    
+    
+    body {
+        margin: 0;
+        padding: 0;
+        width:100%;
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+        margin-left: 0;
+        margin-right: 0;
+        background-color:#000000;
+        width:100%;
+    }
+
+    .navbar-title{
+        color: rgb(144, 144, 144);
+        font-size: 1rem;
+        display: flex; /* Use flexbox for right links */
+        margin-right: auto; /* Push to the far right */
+        margin-left: 1.2rem;
+    }
+
+    /* Hide all filter links except the one with the 'current-page' class */
+    .filter-links {
+        display: none; /* Hide the filter links initially */
+        text-align:center;
+    }
+
+    .right-links {
+        margin-left: 0; /* Push to the far right */
+        margin-right: 1.2rem;
+        list-style-type: none;
+    }
+    
+    .right-links ul {
+        margin-left: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        display: flex; /* Keep the ul as a flex container */
+    }
+    
+    .right-links li {
+        margin-left: 1.5rem; /* Space between the right links */
+    }
+    
+    .right-links li a {
+        color: rgb(144, 144, 144);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+        list-style-type: none;
+    }
+    
+    .right-links li a:hover {
+        color: #ffffff;
+    }
+
+    .main{
+        width:100%;
+    }
+
+    .content{
+        width: 100%;
+        height: 82vh;
+        background-color:none;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-image {
+        width: 100%; /* Ensure full width */
+        height:30vh;
+        max-width: 100%; /* Prevent overflow */
+        margin: 0 auto; /* Center if needed */
+        overflow: hidden; /* Hide overflow */
+        background-color: blanchedalmond;
+    }
+    
+    .hero-image img {
+        width: 100%; /* Scale to fit */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Prevent bottom margin from images */
+        object-fit:cover;
+    }
+
+    .heading{
+        display:flex;
+        flex-direction: column;
+        height:10%;
+    }
+
+    .TITLE{
+        color:#ffffff;
+        background-color: none;
+        font-size: 3rem;
+        text-align: left;
+        margin-top: 0rem;
+        margin-left: 2rem;
+        width:50%;
+    }
+    
+    .TITLE p{
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }
+    
+    .archiving {
+        background-color:none ;
+        text-decoration: none;
+        font-size:0.8rem;
+        width: 84%;
+        margin-left: 8%;
+        margin-right:8%;
+        margin-bottom:3%;
+    }
+    
+    .archiving ul {
+        list-style-type: none !important; /* Use !important to ensure it overrides any other styles */
+        margin: 0;
+        padding: 0;
+        display: flex; /* Flexbox for layout */
+    }
+    
+    .archiving ul li {
+        margin: 0 4rem;
+        margin-top: 0rem;
+        margin-left: 0rem;
+        background-color: none;
+        width: 15rem;
+        color: rgb(144, 144, 144); /* This is for the labels */
+    }
+    
+    .archiving ul li:last-child {
+        margin-right: 0; /* Correct syntax for the last-child pseudo-class */
+    }
+    
+    .archiving ul li a {
+        color: rgb(144, 144, 144);
+        font-size: 0.8rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        margin-left: -1rem;
+    }
+     
+    .project-story{
+        background-color: none;
+        color:white;
+        width:84%;
+        height: 30vh;
+        margin-left: 2.5rem;
+        margin-right:2.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .project-story p{
+        margin-top:0;
+        font-size: 0.85rem;
+    }
+    
+    .flipthrough{
+        width: 90%;
+        margin-left:8%;
+        margin-top: 14%;
+        background-color: cornflowerblue;
+        height: 35vh;
+    }
+    
+    .flipthrough img{
+          max-width: 100%; /* Limit image width to container's width */
+        max-height: 100%; /* Limit image height to container's height */
+        width: 100%; /* Maintain aspect ratio */
+        height: 35vh; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    }
+
+    .front-cover {
+        width: 25vw; 
+        height: auto; 
+        margin-left: 2.5rem;
+        top: 23%; /* Adjust based on where you want it to start */
+        left: 4%; /* Adjust to control horizontal placement */
+        transform: rotate(-10deg); /* Adjust angle as needed */
+        z-index: 2; /* Ensure it overlaps */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add drop shadow */
+    }
+    
+    .front-cover img {
+        width: 100%; 
+        height: auto;
+        max-height: 100%; 
+        object-fit: cover; 
+        display: block; 
+        margin: 0 auto; 
+    }
+    
+    .spread-5 {
+        width: 50vw; 
+        height: auto; 
+        margin-left: 2.5rem;
+        background-color: antiquewhite;
+        overflow: hidden;
+        padding: 0; 
+        border: none; 
+        position: absolute; /* Make it position absolute */
+        top: 23%; /* Adjust based on where you want it to start */
+        left: 7%; /* Adjust to control horizontal placement */
+        transform: rotate(-10deg); /* Adjust angle as needed */
+        z-index: 1; /* Ensure it overlaps */
+    }
+    
+    .spread-5 img {
+        width: 100%; 
+        height: auto;
+        max-height: 100%; 
+        object-fit: cover; 
+        display: block; 
+        margin: 0 auto; 
+    }
+    
+    .grid-directions {
+        width: 55%;
+        height: 10vh;
+        color: rgb(255, 255, 255);
+        position: absolute; /* Make it overlap content */
+        top: 27%; /* Adjust to control vertical placement */
+        left: 51%; /* Adjust to control horizontal placement */
+        z-index: 2; /* Ensure it overlaps other content */
+        transform: rotate(10deg); /* Adjust angle as needed */
+        font-size: 2rem;
+        line-height:2rem;
+    }
+    
+    .grid-directions p {
+        margin: 0; /* Remove any default margins */
+        padding: 0; /* Remove padding if necessary */
+    }
+    
+    .arrow{
+        width: 8.5vw;
+        height: auto;
+        color: aliceblue;
+        position: absolute; /* Make it overlap content */
+        top: 27.8%; /* Adjust to control vertical placement */
+        left: 60%; /* Adjust to control horizontal placement */
+        z-index: 2; /* Ensure it overlaps other content */
+        transform: rotate(-5deg); /* Adjust angle as needed */
+        font-size: 4rem;
+    }
+    
+    .arrow img {
+        width:100%;
+        height:auto;
+        margin: 0; /* Remove any default margins */
+        padding: 0; /* Remove padding if necessary */
+    }
+
+    .spreads-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 1.5rem;
+        width: 84%; /* Adjust to your desired width */
+        max-width: 100%; /* Set a max width for larger screens */
+        margin: 0 auto; /* Center the grid horizontally */
+        margin-top: 18rem;
+        margin-left:8%;
+        margin-right:8%;
+        margin-bottom: 3rem;
+    }
+    
+    .grid-item {
+        background-color: #ffffff;
+        padding: 0;
+        width:100%;
+        height: 14.5rem; /* Fixed height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+        overflow: hidden; /* Hide overflow */
+        cursor: pointer;
+    }
+    
+    .grid-item img {
+        max-width: 100%; /* Limit image width to container's width */
+        max-height: 100%; /* Limit image height to container's height */
+        width: auto; /* Maintain aspect ratio */
+        height: 100%; /* Fill the height of the container */
+        object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    }
+
+    /* The Modal (background) */
+.modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal img {
+    max-width: 100%; /* Max width of the image */
+    max-height: 100%; /* Max height of the image */
+    margin-top:15%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+}
+
+/* Modal Image */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Adjust modal-nav for proper alignment */
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px; /* Ensures some padding on the sides */
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 50px; /* Larger arrow icons */
+    color: white;
+    user-select: none; /* Prevent selection */
+}
+
+.prev {
+    position: absolute;
+    left: 20px; /* Move to the left side */
+}
+
+.next {
+    position: absolute;
+    right: 20px; /* Move to the right side */
+}
+
+.prev:hover, .next:hover {
+    color: #bbb; /* Lighter color on hover */
+}
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }    
+    
+    body {
+        margin: 0;
+        padding: 0;
+        width:100%;
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+        margin-left: 0;
+        margin-right: 0;
+        background-color:#000000;
+        width:100%;
+    }
+
+    .navbar-title{
+        color: rgb(144, 144, 144);
+        font-size: 1rem;
+        display: flex; /* Use flexbox for right links */
+        margin-right: auto; /* Push to the far right */
+        margin-left: 1rem;
+    }
+
+    /* Hide all filter links except the one with the 'current-page' class */
+    .filter-links {
+        display: none; /* Hide the filter links initially */
+        text-align:center;
+    }
+
+    .right-links {
+        margin-left: 0; /* Push to the far right */
+        margin-right: 1rem;
+        list-style-type: none;
+    }
+    
+    .right-links ul {
+        margin-left: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        display: flex; /* Keep the ul as a flex container */
+    }
+    
+    .right-links li {
+        margin-left: 1.5rem; /* Space between the right links */
+    }
+    
+    .right-links li a {
+        color: rgb(144, 144, 144);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+        list-style-type: none;
+    }
+    
+    .right-links li a:hover {
+        color: #ffffff;
+    }
+
+    .main{
+        width:100%;
+    }
+
+    .content{
+        width: 100%;
+        height: 82vh;
+        background-color:none;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-image {
+        width: 100%; /* Ensure full width */
+        height:30vh;
+        max-width: 100%; /* Prevent overflow */
+        margin: 0 auto; /* Center if needed */
+        overflow: hidden; /* Hide overflow */
+        background-color: blanchedalmond;
+    }
+    
+    .hero-image img {
+        width: 100%; /* Scale to fit */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Prevent bottom margin from images */
+        object-fit:cover;
+    }
+
+    .heading{
+        display:flex;
+        flex-direction: column;
+        height:10%;
+    }
+
+    .TITLE{
+        color:#ffffff;
+        background-color: none;
+        font-size: 3rem;
+        text-align: left;
+        margin-top: 0rem;
+        margin-left: 1.8rem;
+        width:100%;
+    }
+    
+    .TITLE p{
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }
+    
+    .archiving {
+        background-color:none ;
+        text-decoration: none;
+        font-size:0.8rem;
+        width: 96%;
+        margin-left: 2rem;
+        margin-right:2rem;
+        margin-bottom:3%;
+    }
+    
+    .archiving ul {
+        list-style-type: none !important; /* Use !important to ensure it overrides any other styles */
+        margin: 0;
+        padding: 0;
+        display: flex; /* Flexbox for layout */
+    }
+    
+    .archiving ul li {
+        margin: 0 4rem;
+        margin-top: 0rem;
+        margin-left: 0rem;
+        background-color: none;
+        width: 15rem;
+        color: rgb(144, 144, 144); /* This is for the labels */
+    }
+    
+    .archiving ul li:last-child {
+        margin-right: 0; /* Correct syntax for the last-child pseudo-class */
+    }
+    
+    .archiving ul li a {
+        color: rgb(144, 144, 144);
+        font-size: 0.8rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        margin-left: -1rem;
+    }
+     
+    .project-story{
+        background-color: none;
+        color:white;
+        width:92%;
+        height: 30vh;
+        margin-left: 2rem;
+        margin-right:2rem;
+        margin-top: 0.5rem;
+    }
+    
+    .project-story p{
+        margin-top:0;
+        font-size: 0.85rem;
+    }
+    
+    .flipthrough{
+        width: 91.5%;
+        margin-left:4%;
+        margin-top: 4%;
+        background-color: cornflowerblue;
+        height: 70vh;
+    }
+    
+    .flipthrough img{
+          max-width: 100%; /* Limit image width to container's width */
+        max-height: 100%; /* Limit image height to container's height */
+        width: 100%; /* Maintain aspect ratio */
+        height: 70vh; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    }
+
+    .front-cover {
+        width: 25vw; 
+        height: auto; 
+        margin-left: 2.5rem;
+        top: 36%; /* Adjust based on where you want it to start */
+        left: 4%; /* Adjust to control horizontal placement */
+        transform: rotate(-10deg); /* Adjust angle as needed */
+        z-index: 2; /* Ensure it overlaps */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add drop shadow */
+    }
+    
+    .front-cover img {
+        width: 100%; 
+        height: auto;
+        max-height: 100%; 
+        object-fit: cover; 
+        display: block; 
+        margin: 0 auto; 
+    }
+    
+    .spread-5 {
+        width: 50vw; 
+        height: auto; 
+        margin-left: 2.5rem;
+        background-color: antiquewhite;
+        overflow: hidden;
+        padding: 0; 
+        border: none; 
+        position: absolute; /* Make it position absolute */
+        top: 36%; /* Adjust based on where you want it to start */
+        left: 7%; /* Adjust to control horizontal placement */
+        transform: rotate(-10deg); /* Adjust angle as needed */
+        z-index: 1; /* Ensure it overlaps */
+    }
+    
+    .spread-5 img {
+        width: 100%; 
+        height: auto;
+        max-height: 100%; 
+        object-fit: cover; 
+        display: block; 
+        margin: 0 auto; 
+    }
+    
+    .grid-directions {
+        width: 35%;
+        height: 5vh;
+        color: rgb(255, 255, 255);
+        position: absolute; /* Make it overlap content */
+        top: 42%; /* Adjust to control vertical placement */
+        left: 68%; /* Adjust to control horizontal placement */
+        z-index: 2; /* Ensure it overlaps other content */
+        transform: rotate(10deg); /* Adjust angle as needed */
+        font-size: 2rem;
+        line-height:2rem;
+    }
+    
+    .grid-directions p {
+        margin: 0; /* Remove any default margins */
+        padding: 0; /* Remove padding if necessary */
+    }
+    
+    .arrow{
+        width: 8.5vw;
+        height: auto;
+        color: aliceblue;
+        position: absolute; /* Make it overlap content */
+        top: 44%; /* Adjust to control vertical placement */
+        left: 68%; /* Adjust to control horizontal placement */
+        z-index: 2; /* Ensure it overlaps other content */
+        transform: rotate(0deg); /* Adjust angle as needed */
+        font-size: 4rem;
+    }
+    
+    .arrow img {
+        width:100%;
+        height:auto;
+        margin: 0; /* Remove any default margins */
+        padding: 0; /* Remove padding if necessary */
+    }
+
+    .spreads-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 1.5rem;
+        width: 92%; /* Adjust to your desired width */
+        max-width: 100%; /* Set a max width for larger screens */
+        margin: 0 auto; /* Center the grid horizontally */
+        margin-top: 32rem;
+        margin-left:4%;
+        margin-right:4%;
+        margin-bottom: 3rem;
+    }
+    
+    .grid-item {
+        background-color: #ffffff;
+        padding: 0;
+        width:100%;
+        height: 14.5rem; /* Fixed height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+        overflow: hidden; /* Hide overflow */
+        cursor: pointer;
+    }
+    
+    .grid-item img {
+        max-width: 100%; /* Limit image width to container's width */
+        max-height: 100%; /* Limit image height to container's height */
+        width: auto; /* Maintain aspect ratio */
+        height: 100%; /* Fill the height of the container */
+        object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    }
+
+    /* The Modal (background) */
+.modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal img {
+    max-width: 100%; /* Max width of the image */
+    max-height: 100%; /* Max height of the image */
+    margin-top:15%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+}
+
+/* Modal Image */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Adjust modal-nav for proper alignment */
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px; /* Ensures some padding on the sides */
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 50px; /* Larger arrow icons */
+    color: white;
+    user-select: none; /* Prevent selection */
+}
+
+.prev {
+    position: absolute;
+    left: 20px; /* Move to the left side */
+}
+
+.next {
+    position: absolute;
+    right: 20px; /* Move to the right side */
+}
+
+.prev:hover, .next:hover {
+    color: #bbb; /* Lighter color on hover */
+}
+}

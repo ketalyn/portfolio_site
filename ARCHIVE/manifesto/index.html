@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MANIFESTO POSTER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./main.css"> <!-- Add link to main.css -->
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-title">MANIFESTO POSTER</div>
+        <div class="filter-links">
+            <ul>
+                <li><a href="../../index.html" class="ABOUT">SELECTED</a></li>
+                <li><span class="current-page">ARCHIVE</span></li>
+            </ul>
+        </div>
+    
+        <div class="right-links">
+            <li><span class="current-page">WORK</span></li>
+            <li><a href="../ABOUT/index.html" class="ABOUT">KATELYN LEE</a></li>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="hero-image">
+            <img src="./assets/manifesto_full copy.jpg" alt="Hero image">
+        </div>
+        <div class="heading">
+            <div class="TITLE"><p>MANIFESTO POSTER</p></div>
+            <div class="archiving">
+                <ul>
+                    <li><span class="label">YEAR:</span><span class="value"><br>2022</span></li>
+                    <li><span class="label">ROLE:</span><span class="value"><br>DESIGNER</span></li>
+                    <li><span class="label">SKILLS:</span><span class="value"><br>ILLUSTRATOR, PHOTOSHOP, TYPESETTING, GRAPHIC DESIGN</span></li>
+                </ul>
+            </div>            
+        </div>
+        <div class="content">
+            <div class="project-story">
+                <p>
+                    Bruce Mau's The Incomplete Manifesto for Growth presented using a modular poster system, reinterpreting the common understanding of what a poster is.
+                </p>
+            </div>
+        
+        </div>
+
+        <div class="QR">
+            <div class="static-gallery">
+                <img src="./assets/manifesto_full copy.jpg" alt="Image 1" class="gallery-img">
+                <img src="./assets/poster/poster_final-01.png" alt="Image 2" class="gallery-img">
+                <img src="./assets/poster/poster_final-02.png" alt="Image 3" class="gallery-img">
+                <img src="./assets/poster/poster_final-03.png" alt="Image 4" class="gallery-img">
+                <img src="./assets/poster/poster_final-04.png" alt="Image 5" class="gallery-img">
+                <img src="./assets/poster/poster_final-05.png" alt="Image 6" class="gallery-img">
+                <img src="./assets/poster/poster_final-06.png" alt="Image 7" class="gallery-img">
+                <img src="./assets/poster/poster_final-07.png" alt="Image 8" class="gallery-img">
+                <img src="./assets/poster/poster_final-08.png" alt="Image 9" class="gallery-img">
+                <img src="./assets/poster/poster_final-09.png" alt="Image 10" class="gallery-img">
+                <img src="./assets/poster/poster_final-10.png" alt="Image 11" class="gallery-img">
+                <img src="./assets/poster/poster_final-11.png" alt="Image 12" class="gallery-img">
+                <img src="./assets/poster/poster_final-12.png" alt="Image 13" class="gallery-img">
+                <img src="./assets/poster/poster_final-13.png" alt="Image 14" class="gallery-img">
+                
+                <!-- Always visible controls -->
+                <div class="gallery-controls">
+                    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+                    <span class="next" onclick="changeImage(1)">&#10095;</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal for the gallery -->
+    <div id="galleryModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>    
+
+<div class="footer">
+    <div class="connect-links">
+        <ul>
+            <li><a href="https://www.instagram.com/ketalyn.lee" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></li>
+            <li><a href="mailto:katelyn.lee010@gmail.com">EMAIL</a></li>
+            <li><a href="https://www.linkedin.com/in/katelyn-lee-5b85a5261" target="_blank">LINKEDIN</a></li>
+        </ul>
+    </div>
+
+    <p>Designed and coded by Katelyn Lee</p>
+    <P>Copyright © 2024 Katelyn Lee. All rights reserved.</P>
+</div>
+
+    <!-- Load your bundled JavaScript file -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

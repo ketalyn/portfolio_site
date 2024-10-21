@@ -1,0 +1,1582 @@
+@font-face {
+    font-family: 'MyFont'; /* Give your font a name */
+    src: url('./assets/Myfont-Regular.otf') format('otf'),
+         url('./assets/Myfont-Regular.ttf') format('ttf'); /* Add other formats if available */
+    font-weight: normal; /* Specify the font weight (normal, bold, etc.) */
+    font-style: normal; /* Specify the font style (normal, italic, etc.) */
+}
+
+
+/* General body styling */
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    color: rgb(144, 144, 144);
+    padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+    z-index: 1000; /* Ensure the navbar stays on top */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out the items */
+}
+
+.navbar-title{
+    color: rgb(144, 144, 144);
+    font-size: 1rem;
+    display: flex; /* Use flexbox for right links */
+    margin-right: auto; /* Push to the far right */
+    margin-left: 1.5rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    color: rgb(144, 144, 144);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin-left:-1rem;
+}
+
+.navbar ul li a:hover {
+    color:#ffffff;
+}
+
+/* Center filter links */
+.filter-btn {
+    flex-grow: 1; /* Allow this section to grow and take remaining space */
+    display: flex; /* Use flexbox for alignment */
+    margin-left: 3%;
+    justify-content: center; /* Center items horizontally */
+}
+
+.filter-btn ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.filter-links li {
+    margin-left: 0 0rem; /* Space between the filter links */
+    position: relative;
+}
+
+.filter-links ul li a{
+    margin-left:0rem;
+}
+
+.filter-links .current-page{
+    color:#ffffff;
+    font-size: 1rem;
+}
+
+.filter-links li:not(:last-child)::after {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    right: -0.8rem; /* Position to the right of the list item */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    height: 20px; /* Adjust height of the line */
+    width: 1px; /* Width of the line */
+    background-color: rgb(144, 144, 144); /* Line color */
+}
+
+.ABOUT {
+    font-size: 1.2rem;
+}
+
+/* Styles for the active page */
+.navbar ul li a.active {
+    color: white; /* Active link color */
+}
+
+.navbar ul li a:hover {
+    color: #ffffff;
+}
+
+/* Align right links */
+.right-links {
+    display: flex; /* Use flexbox for right links */
+    margin-left: auto; /* Push to the far right */
+    margin-right: 3.2rem;
+    list-style-type: none;
+}
+
+.right-links ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.right-links li {
+    margin-left: 1rem; /* Space between the right links */
+}
+
+.right-links li a {
+    color: rgb(144, 144, 144);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    list-style-type: none;
+}
+
+.right-links li a:hover{
+    color:#ffffff;
+}
+
+.current-page{
+    color:#ffffff;
+    font-size: 1rem;
+}
+
+/* Main content */
+main {
+    position: relative; /* This allows absolute positioning for child elements */
+    margin-top: 4.5rem; 
+    display: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    height: 40vh;
+    background-color:none;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.hero-image {
+    background-color: #ffffff;
+    width: 100%; /* Full width */
+    height: 20rem; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    overflow: hidden; /* Hide overflow */
+}
+
+.hero-image img {
+    max-width: 100%; /* Limit image width to container's width */
+    max-height: 100%; /* Limit image height to container's height */
+    width: 100%; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.heading{
+    display:flex;
+    height:10%;
+}
+
+.TITLE{
+    color:#ffffff;
+    background-color: none;
+    font-size: 4rem;
+    text-align: left;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+    width:50%;
+}
+
+.TITLE p{
+    margin-top:-0.5rem;
+    margin-bottom:2.5rem;
+}
+
+.archiving {
+    background-color: none;
+    text-decoration: none;
+    width: 40%;
+    margin-left: 5%;
+}
+
+.archiving ul {
+    list-style-type: none !important; /* Use !important to ensure it overrides any other styles */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for layout */
+}
+
+.archiving ul li {
+    margin: 0 4rem;
+    margin-top: 2rem;
+    margin-left: 0rem;
+    background-color: none;
+    width: 15rem;
+    color: rgb(144, 144, 144); /* This is for the labels */
+}
+
+.archiving ul li:last-child {
+    margin-right: 0; /* Correct syntax for the last-child pseudo-class */
+}
+
+.archiving ul li a {
+    color: rgb(144, 144, 144);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-left: -1rem;
+}
+
+.archiving .value {
+    color: white; /* Set the color of the values to white */
+}
+
+.archiving .label {
+    color: rgb(144, 144, 144); /* Keep the label color as is */
+}
+
+
+.project-story{
+    background-color: none;
+    color:white;
+    width:49%;
+    height: 40vh;
+    margin-left: 2.5rem;
+    margin-top: 1rem;
+}
+
+.project-story p{
+    margin-top:0;
+}
+
+.Wikipedia{
+    text-decoration: none;
+}
+
+.flipthrough{
+    width: 40%;
+    margin-left:6%;
+    margin-top: 1%;
+    background-color: cornflowerblue;
+    height: 40vh;
+}
+
+.flipthrough img{
+      max-width: 100%; /* Limit image width to container's width */
+    max-height: 100%; /* Limit image height to container's height */
+    width: 100%; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.spread-5 img {
+    width: 100%; 
+    height: auto;
+    max-height: 100%; 
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.QR{
+    display:flex;
+    flex-direction: space-between;
+    width:94.8%;
+    height:74vh;
+    margin-left:2.8%;
+    margin-right:2.8%;
+    margin-top:4%;
+    margin-bottom:4%;
+    background-color: none;
+}
+
+.QR .QR-guide{
+    width: 49%;
+    height: 10vh;
+    color: rgb(255, 255, 255);
+    position: absolute; /* Make it overlap content */
+    top: 32%; /* Adjust to control vertical placement */
+    left: 2.8%; /* Adjust to control horizontal placement */
+    z-index: 2; /* Ensure it overlaps other content */
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 1.2rem;
+    line-height:1.8rem;
+}
+
+/* Style for the static gallery */
+.static-gallery {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38%;
+    height:100%;
+    overflow: hidden;
+    background-color: none;
+    padding: 0;
+    margin-top: 0%;
+    margin-left:auto;
+    margin-right:0;
+}
+
+/* Adjust the images */
+.static-gallery .gallery-img {
+    max-width: 15vw; /* Adjust size as needed */
+    margin: 0 1rem;
+    margin-top:0;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    display: none; /* Hide all images initially */
+}
+
+/* Class for the visible (active) image */
+.static-gallery .gallery-img.active {
+    display: block; /* Show the active image */
+}
+
+/* Controls for next and previous buttons */
+.gallery-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.gallery-controls .prev,
+.gallery-controls .next {
+    pointer-events: all;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.phones {
+    position: absolute;
+    right: 0;
+    top: 43%; /* Center vertically */
+    left: 2.8%; /* Adjust as necessary */
+    height:55vh;
+    width: 52.7%; /* Adjust to your needs */
+    padding: 0 1rem;
+    background-color: #f0f0f0; /* Optional, to match the page background */
+    transform: translateY(-50%); /* Center the container vertically */
+    display: flex; /* Use flexbox to display items horizontally */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Center items vertically */
+}
+
+.phone-container {
+    position: relative; /* Allow absolute positioning of phone frame */
+    overflow: hidden; /* Hide any overflow */
+    margin: 0 1rem; /* Space between videos horizontally */
+    margin-top: 1rem;
+    margin-bottom:1rem;
+    width: 20%; /* Fixed width for the phone containers */
+    height: 76%; /* Maintain aspect ratio */
+}
+
+.phone-container video {
+    width: 92%; /* Make the video fill the entire container */
+    margin-left:4%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it behaves as a block element */
+    border-radius: 25px; /* Rounded corners */
+}
+
+.phone-frame {
+    position: absolute; /* Position relative to the .phone-container */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Make the phone frame cover the entire video */
+    height: 100%; /* Maintain aspect ratio */
+    pointer-events: none; /* Allow interactions with the video */
+}
+
+.spreads-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+    width: 95%; /* Adjust to your desired width */
+    max-width: 100%; /* Set a max width for larger screens */
+    margin: 0 auto; /* Center the grid horizontally */
+    margin-left:2.8%;
+    margin-right:3;
+    margin-top: 0;
+    margin-bottom: 10rem;
+}
+
+.spreads-grid .grid-item{
+    cursor: pointer;
+}
+
+.grid-item {
+    background-color: #ffffff;
+    padding: 0;
+    height: 15.5rem; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    overflow: hidden; /* Hide overflow */
+    cursor: pointer;
+}
+
+.grid-item img {
+    max-width: 100%; /* Limit image width to container's width */
+    max-height: 100%; /* Limit image height to container's height */
+    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Fill the height of the container */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal img {
+    max-width: 80%; /* Max width of the image */
+    max-height: 90%; /* Max height of the image */
+    margin-top: 3%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 60%;
+    max-width: 700px;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px; /* Ensures some padding on the sides */
+}
+
+.prev, .next {
+    cursor: pointer; /* Ensure the cursor shows as a pointer */
+    z-index: 1002; /* Keep this high enough to be on top */
+    pointer-events: auto; /* Make sure pointer events are enabled */
+}
+
+.prev {
+    position: absolute;
+    left: 20px; /* Move to the left side */
+}
+
+.next {
+    position: absolute;
+    right: 20px; /* Move to the right side */
+}
+
+.prev:hover, .next:hover {
+    color: #bbb; /* Lighter color on hover */
+    cursor: pointer;
+}
+
+.grid-directions{
+    color:#ffffff;
+    font-size: 2rem;
+    margin-left:2.8%;
+}
+
+.selected-spreads-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 95%; /* Adjust to your desired width */
+    max-width: 100%; /* Set a max width for larger screens */
+    margin: 0 auto; /* Center the grid horizontally */
+    margin-left:2.8%;
+    margin-right:3;
+    margin-top: 0;
+    margin-bottom: 6rem;
+}
+
+.selected-spreads-grid .grid-item {
+    background-color: #ffffff;
+    padding: 0;
+    height: 15.5rem; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.selected-spreads-grid .grid-item img {
+    max-width: 100%; /* Limit image width to container's width */
+    max-height: 100%; /* Limit image height to container's height */
+    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Fill the height of the container */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.selected-grid-item {
+    background-color: #ffffff;
+    padding: 0;
+    height: 15.5rem; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    overflow: hidden; /* Hide overflow */
+    cursor: pointer;
+}
+
+.selected-grid-item img {
+    max-width: 100%; /* Limit image width to container's width */
+    max-height: 100%; /* Limit image height to container's height */
+    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Fill the height of the container */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.footer {
+    height: 10rem;
+    width: 100%;
+    background-color: black;
+    bottom: 0;
+    margin-top: 2rem;
+    color: rgb(144, 144, 144);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect-links {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.connect-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem; /* Use gap for spacing */
+}
+
+.connect-links li a {
+    color: rgb(144, 144, 144);
+    transition: color 0.3s ease;
+}
+
+.connect-links li a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }    
+    
+    body {
+        margin: 0;
+        padding: 0;
+        width:100%;
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+        margin-left: 0;
+        margin-right: 0;
+        background-color:#000000;
+        width:100%;
+    }
+
+    .navbar-title{
+        color: rgb(144, 144, 144);
+        font-size: 1rem;
+        display: flex; /* Use flexbox for right links */
+        margin-right: auto; /* Push to the far right */
+        margin-left: 1.2rem;
+    }
+
+    /* Hide all filter links except the one with the 'current-page' class */
+    .filter-links {
+        display: none; /* Hide the filter links initially */
+        text-align:center;
+    }
+
+    .right-links {
+        margin-left: 0; /* Push to the far right */
+        margin-right: 1.2rem;
+        list-style-type: none;
+    }
+    
+    .right-links ul {
+        margin-left: 0; /* Remove default margin */
+        margin-right:0;
+        padding: 0; /* Remove default padding */
+        display: flex; /* Keep the ul as a flex container */
+    }
+    
+    .right-links li {
+        margin-left: 1.5rem; /* Space between the right links */
+    }
+    
+    .right-links li a {
+        color: rgb(144, 144, 144);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+        list-style-type: none;
+    }
+    
+    .right-links li a:hover {
+        color: #ffffff;
+    }
+
+    .main{
+        width:100%;
+    }
+
+    .content{
+        width: 100%;
+        height: 82vh;
+        background-color:none;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-image {
+        width: 100%; /* Ensure full width */
+        height:30vh;
+        max-width: 100%; /* Prevent overflow */
+        margin: 0 auto; /* Center if needed */
+        overflow: hidden; /* Hide overflow */
+        background-color: blanchedalmond;
+    }
+    
+    .hero-image img {
+        width: 100%; /* Scale to fit */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Prevent bottom margin from images */
+        object-fit:cover;
+        transform: scale(2); /* Scale up by 10% */
+    }
+
+    .heading{
+        display:flex;
+        flex-direction: column;
+        height:10%;
+    }
+
+    .TITLE{
+        color:#ffffff;
+        background-color: none;
+        font-size: 3rem;
+        text-align: left;
+        margin-top: 0rem;
+        margin-left: 2rem;
+        width:100%;
+    }
+    
+    .TITLE p{
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }
+    
+    .archiving {
+        background-color:none ;
+        text-decoration: none;
+        font-size:0.8rem;
+        width: 84%;
+        margin-left: 8%;
+        margin-right:8%;
+        margin-bottom:3%;
+    }
+    
+    .archiving ul {
+        list-style-type: none !important; /* Use !important to ensure it overrides any other styles */
+        margin: 0;
+        padding: 0;
+        display: flex; /* Flexbox for layout */
+    }
+    
+    .archiving ul li {
+        margin: 0 4rem;
+        margin-top: 0rem;
+        margin-left: 0rem;
+        background-color: none;
+        width: 15rem;
+        color: rgb(144, 144, 144); /* This is for the labels */
+    }
+    
+    .archiving ul li:last-child {
+        margin-right: 0; /* Correct syntax for the last-child pseudo-class */
+    }
+    
+    .archiving ul li a {
+        color: rgb(144, 144, 144);
+        font-size: 0.8rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        margin-left: -1rem;
+    }
+     
+    .project-story{
+        background-color: none;
+        color:white;
+        width:84%;
+        height: 30vh;
+        margin-left: 2.5rem;
+        margin-right:2.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .project-story p{
+        margin-top:0;
+        font-size: 0.85rem;
+    }
+    
+    .flipthrough{
+        width: 84%;
+        margin-left:8%;
+        margin-top: -16%;
+        background-color: cornflowerblue;
+        height: 35vh;
+    }
+    
+    .flipthrough img{
+          max-width: 100%; /* Limit image width to container's width */
+        max-height: 100%; /* Limit image height to container's height */
+        width: 100%; /* Maintain aspect ratio */
+        height: 35vh; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    }
+    
+    .grid-directions {
+        width: 55%;
+        height: 10vh;
+        color: rgb(255, 255, 255);
+        position: absolute; /* Make it overlap content */
+        top: 32%; /* Adjust to control vertical placement */
+        left: 51%; /* Adjust to control horizontal placement */
+        z-index: 2; /* Ensure it overlaps other content */
+        font-size: 2rem;
+        line-height:2rem;
+        display:none;
+    }
+    
+    .grid-directions p {
+        margin: 0; /* Remove any default margins */
+        padding: 0; /* Remove padding if necessary */
+    }
+    
+    .QR{
+        display:flex;
+        flex-direction: column;
+        align-items: center; /* Aligns items in the center of the container */
+        justify-content: flex-start;
+        width:94.8%;
+        height:74vh;
+        margin-left:2rem;
+        margin-right:2.8%;
+        margin-top:4%;
+        margin-bottom:4%;
+        background-color: none;
+    }
+    
+    .QR .QR-guide{
+        width: 88%;
+        height: 10vh;
+        color: rgb(255, 255, 255);
+        position: absolute; /* Make it overlap content */
+        top: 55%; /* Adjust to control vertical placement */
+        left: 2rem; /* Adjust to control horizontal placement */
+        z-index: 2; /* Ensure it overlaps other content */
+        font-family: 'Roboto Mono', sans-serif;
+        font-size: 1.1rem;
+        line-height:1.6rem;
+    }
+
+    .static-gallery {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height:40vh;
+        overflow: hidden;
+        padding: 0;
+        margin-top: -40%;
+        margin-left:-10%;
+        margin-right:0;
+    }
+    
+    /* Adjust the images */
+    .static-gallery .gallery-img {
+        max-width: 45vw; /* Adjust size as needed */
+        margin: 0 1rem;
+        margin-top:15%;
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+        display: none; /* Hide all images initially */
+    }
+    
+    /* Controls for next and previous buttons */
+    .gallery-controls {
+        position: absolute;
+        top: 60%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .phones {
+        position: absolute;
+        right: 0;
+        top: 120%; /* Center vertically */
+        left: 7%; /* Adjust as necessary */
+        height:200vh;
+        width: 85%; /* Adjust to your needs */
+        margin-bottom:250vh;
+        padding: 0 1rem;
+        background-color: #f0f0f0; /* Optional, to match the page background */
+        transform: translateY(-50%); /* Center the container vertically */
+        display: flex; /* Use flexbox to display items horizontally */
+        flex-direction: column; /* Prevent wrapping to the next line */
+        justify-content: flex-start; /* Align items to the start */
+        align-items: center; /* Center items vertically */
+    }
+    
+    .phone-container {
+        position: relative; /* Allow absolute positioning of phone frame */
+        overflow: hidden; /* Hide any overflow */
+        margin: 0 1rem; /* Space between videos horizontally */
+        margin-top: 1rem;
+        margin-bottom:1rem;
+        width: 50%; /* Fixed width for the phone containers */
+        height: 80%; /* Maintain aspect ratio */
+    }
+    
+    .phone-container video {
+        width: 92%; /* Make the video fill the entire container */
+        margin-left:4%;
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure it behaves as a block element */
+        border-radius: 25px; /* Rounded corners */
+    }
+    
+    .phone-frame {
+        position: absolute; /* Position relative to the .phone-container */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Make the phone frame cover the entire video */
+        height: 98%; /* Maintain aspect ratio */
+        pointer-events: none; /* Allow interactions with the video */
+    }
+
+    .spreads-grid {
+        display: none;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 1.5rem;
+        width: 84%; /* Adjust to your desired width */
+        max-width: 100%; /* Set a max width for larger screens */
+        margin: 0 auto; /* Center the grid horizontally */
+        margin-top: 18rem;
+        margin-left:8%;
+        margin-right:8%;
+        margin-bottom: 3rem;
+    }
+    
+    .grid-item {
+        background-color: #ffffff;
+        padding: 0;
+        width:100%;
+        height: 14.5rem; /* Fixed height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+        overflow: hidden; /* Hide overflow */
+        cursor: pointer;
+    }
+    
+    .grid-item img {
+        max-width: 100%; /* Limit image width to container's width */
+        max-height: 100%; /* Limit image height to container's height */
+        width: auto; /* Maintain aspect ratio */
+        height: 100%; /* Fill the height of the container */
+        object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    }
+
+    /* The Modal (background) */
+.modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal img {
+    max-width: 100%; /* Max width of the image */
+    max-height: 100%; /* Max height of the image */
+    margin-top:15%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+}
+
+/* Modal Image */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Adjust modal-nav for proper alignment */
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px; /* Ensures some padding on the sides */
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 50px; /* Larger arrow icons */
+    color: white;
+    user-select: none; /* Prevent selection */
+}
+
+.prev {
+    position: absolute;
+    left: 20px; /* Move to the left side */
+}
+
+.next {
+    position: absolute;
+    right: 20px; /* Move to the right side */
+}
+
+.prev:hover, .next:hover {
+    color: #bbb; /* Lighter color on hover */
+}
+
+.selected-spreads-grid{
+    display:none;
+}
+
+.footer {
+    height: 10rem;
+    width: 100%;
+    background-color: rgb(99, 49, 49);
+    bottom: 0;
+    margin-top: 80rem;
+    color: rgb(144, 144, 144);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }    
+    
+    body {
+        margin: 0;
+        padding: 0;
+        width:100%;
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+        margin-left: 0;
+        margin-right: 0;
+        background-color:#000000;
+        width:100%;
+    }
+
+    .navbar-title{
+        color: rgb(144, 144, 144);
+        font-size: 1rem;
+        display: flex; /* Use flexbox for right links */
+        margin-right: auto; /* Push to the far right */
+        margin-left: 1rem;
+    }
+
+    /* Hide all filter links except the one with the 'current-page' class */
+    .filter-links {
+        display: none; /* Hide the filter links initially */
+        text-align:center;
+    }
+
+    .right-links {
+        margin-left: 0; /* Push to the far right */
+        margin-right: 1rem;
+        list-style-type: none;
+    }
+    
+    .right-links ul {
+        margin-left: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        display: flex; /* Keep the ul as a flex container */
+    }
+    
+    .right-links li {
+        margin-left: 1.5rem; /* Space between the right links */
+    }
+    
+    .right-links li a {
+        color: rgb(144, 144, 144);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+        list-style-type: none;
+    }
+    
+    .right-links li a:hover {
+        color: #ffffff;
+    }
+
+    .main{
+        width:100%;
+    }
+
+    .content{
+        width: 100%;
+        height: 82vh;
+        background-color:none;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-image {
+        width: 100%; /* Ensure full width */
+        height:30vh;
+        max-width: 100%; /* Prevent overflow */
+        margin: 0 auto; /* Center if needed */
+        overflow: hidden; /* Hide overflow */
+        background-color: blanchedalmond;
+    }
+    
+    .hero-image img {
+        width: 100%; /* Scale to fit */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Prevent bottom margin from images */
+        object-fit:cover;
+    }
+
+    .heading{
+        display:flex;
+        flex-direction: column;
+        height:10%;
+        width:96%;
+    }
+
+    .TITLE{
+        color:#ffffff;
+        background-color: none;
+        font-size: 3rem;
+        text-align: left;
+        margin-top: 0rem;
+        margin-left: 1.8rem;
+        width:100%;
+    }
+    
+    .TITLE p{
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }
+    
+    .archiving {
+        background-color:none ;
+        text-decoration: none;
+        font-size:0.8rem;
+        width: 96%;
+        margin-left: 2rem;
+        margin-right:2rem;
+        margin-bottom:3%;
+    }
+    
+    .archiving ul {
+        list-style-type: none !important; /* Use !important to ensure it overrides any other styles */
+        margin: 0;
+        padding: 0;
+        display: flex; /* Flexbox for layout */
+    }
+    
+    .archiving ul li {
+        margin: 0 4rem;
+        margin-top: 0rem;
+        margin-left: 0rem;
+        background-color: none;
+        width: 15rem;
+        color: rgb(144, 144, 144); /* This is for the labels */
+    }
+    
+    .archiving ul li:last-child {
+        margin-right: 0; /* Correct syntax for the last-child pseudo-class */
+    }
+    
+    .archiving ul li a {
+        color: rgb(144, 144, 144);
+        font-size: 0.8rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        margin-left: -1rem;
+    }
+     
+    .project-story{
+        background-color: none;
+        color:white;
+        width:92%;
+        height: 30vh;
+        margin-left: 2rem;
+        margin-right:2rem;
+        margin-top: 0.5rem;
+    }
+    
+    .project-story p{
+        margin-top:0;
+        font-size: 0.85rem;
+    }
+    
+    .flipthrough{
+        width: 91.5%;
+        margin-left:4%;
+        margin-top: 4%;
+        background-color: cornflowerblue;
+        height: 70vh;
+    }
+    
+    .flipthrough img{
+          max-width: 100%; /* Limit image width to container's width */
+        max-height: 100%; /* Limit image height to container's height */
+        width: 100%; /* Maintain aspect ratio */
+        height: 70vh; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    }
+
+    .QR{
+        display:flex;
+        flex-direction: space-between;
+        width:92%;
+        height:24vh;
+        margin-left:2rem;
+        margin-right:2rem;
+        margin-top:10%;
+        margin-bottom:4%;
+        background-color: none;
+    }
+    
+    .QR .QR-guide{
+        width: 40%;
+        height: 10vh;
+        color: rgb(255, 255, 255);
+        position: absolute; /* Make it overlap content */
+        top: 30%; /* Adjust to control vertical placement */
+        left: 4%; /* Adjust to control horizontal placement */
+        z-index: 2; /* Ensure it overlaps other content */
+        font-family: 'Roboto Mono', sans-serif;
+        font-size: 1.2rem;
+        line-height:1.8rem;
+    }
+    
+    /* Style for the static gallery */
+    .static-gallery {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38%;
+        height:100%;
+        overflow: hidden;
+        background-color: none;
+        padding: 0;
+        margin-top: 0%;
+        margin-left:auto;
+        margin-right:0;
+    }
+    
+    /* Adjust the images */
+    .static-gallery .gallery-img {
+        max-width: 20vw; /* Adjust size as needed */
+        margin: 0 1rem;
+        margin-top:0;
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+        display: none; /* Hide all images initially */
+    }
+
+    .phones {
+        position: absolute;
+        right: 0;
+        top: 40%; /* Center vertically */
+        left: 4%; /* Adjust as necessary */
+        height:50vh;
+        width: 92%; /* Adjust to your needs */
+        margin-bottom:10vh;
+        padding: 0 0.2rem;
+        background-color: #f0f0f0; /* Optional, to match the page background */
+        transform: translateY(-50%); /* Center the container vertically */
+        display: flex; /* Use flexbox to display items horizontally */
+        flex-direction: space-between; /* Prevent wrapping to the next line */
+        justify-content: flex-start; /* Align items to the start */
+        align-items: center; /* Center items vertically */
+    }
+    
+    .phone-container {
+        position: relative; /* Allow absolute positioning of phone frame */
+        overflow: hidden; /* Hide any overflow */
+        margin: 0 1rem; /* Space between videos horizontally */
+        margin-top: 0;
+        margin-bottom:0;
+        width: 50%; /* Fixed width for the phone containers */
+        height: 75%; /* Maintain aspect ratio */
+    }
+    
+    .phone-container video {
+        width: 94%; /* Make the video fill the entire container */
+        height:90%;
+        margin-left:4%;
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure it behaves as a block element */
+        border-radius: 25px; /* Rounded corners */
+    }
+    
+    .phone-frame {
+        position: absolute; /* Position relative to the .phone-container */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Make the phone frame cover the entire video */
+        height: 94%; /* Maintain aspect ratio */
+        pointer-events: none; /* Allow interactions with the video */
+    }
+    
+    .grid-directions {
+        width: 100%;
+        height: 5vh;
+        color: rgb(255, 255, 255);
+        position: absolute; /* Make it overlap content */
+        top: 60%; /* Adjust to control vertical placement */
+        left: 1%; /* Adjust to control horizontal placement */
+        z-index: 2; /* Ensure it overlaps other content */
+        font-size: 2rem;
+        line-height:2rem;
+    }
+    
+    .grid-directions p {
+        margin: 0; /* Remove any default margins */
+        padding: 0; /* Remove padding if necessary */
+    }
+    
+    .spreads-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1.5rem;
+        width: 92%; /* Adjust to your desired width */
+        max-width: 100%; /* Set a max width for larger screens */
+        margin: 0 auto; /* Center the grid horizontally */
+        margin-top: 68%;
+        margin-left:4%;
+        margin-right:4%;
+        margin-bottom: 0;
+    }
+    
+    .grid-item {
+        background-color: #ffffff;
+        padding: 0;
+        width:100%;
+        height: 14.5rem; /* Fixed height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+        overflow: hidden; /* Hide overflow */
+        cursor: pointer;
+    }
+    
+    .grid-item img {
+        max-width: 100%; /* Limit image width to container's width */
+        max-height: 100%; /* Limit image height to container's height */
+        width: auto; /* Maintain aspect ratio */
+        height: 100%; /* Fill the height of the container */
+        object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    }
+
+    /* The Modal (background) */
+.modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal img {
+    max-width: 100%; /* Max width of the image */
+    max-height: 100%; /* Max height of the image */
+    margin-top:15%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+}
+
+/* Modal Image */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Adjust modal-nav for proper alignment */
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px; /* Ensures some padding on the sides */
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 50px; /* Larger arrow icons */
+    color: white;
+    user-select: none; /* Prevent selection */
+}
+
+.prev {
+    position: absolute;
+    left: 20px; /* Move to the left side */
+}
+
+.next {
+    position: absolute;
+    right: 20px; /* Move to the right side */
+}
+
+.prev:hover, .next:hover {
+    color: #bbb; /* Lighter color on hover */
+}
+
+.selected-spreads-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1.5rem;
+    width: 92%; /* Adjust to your desired width */
+    max-width: 100%; /* Set a max width for larger screens */
+    margin: 0 auto; /* Center the grid horizontally */
+    margin-left:4%;
+    margin-right:3;
+    margin-top: 15%;
+    margin-bottom: 6rem;
+}
+
+.selected-spreads-grid .grid-item {
+    background-color: #ffffff;
+    padding: 0;
+    height: 15.5rem; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.selected-spreads-grid .grid-item img {
+    max-width: 100%; /* Limit image width to container's width */
+    max-height: 100%; /* Limit image height to container's height */
+    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Fill the height of the container */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.selected-grid-item {
+    background-color: #ffffff;
+    padding: 0;
+    height: 15.5rem; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    overflow: hidden; /* Hide overflow */
+    cursor: pointer;
+}
+
+.selected-grid-item img {
+    max-width: 100%; /* Limit image width to container's width */
+    max-height: 100%; /* Limit image height to container's height */
+    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Fill the height of the container */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+}

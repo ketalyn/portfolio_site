@@ -1,0 +1,211 @@
+/* General body styling */
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    color: rgb(144, 144, 144);
+    padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+    z-index: 1000; /* Ensure the navbar stays on top */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out the items */
+}
+
+.navbar .clock {
+    color: rgb(144, 144, 144);
+    font-size: 1rem;
+    display: flex; /* Use flexbox for right links */
+    margin-right: auto; /* Push to the far right */
+    margin-left: 1.2rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.navbar ul li {
+    margin: 0 1.2rem;
+}
+
+.navbar ul li a {
+    color: rgb(144, 144, 144);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin-left:-1rem;
+}
+
+.navbar ul li a:hover {
+    color:#ffffff;
+}
+
+/* Center filter links */
+.filter-links {
+    flex-grow: 1; /* Allow this section to grow and take remaining space */
+    display: flex; /* Use flexbox for alignment */
+    margin-left: 10%;
+    justify-content: center; /* Center items horizontally */
+}
+
+.filter-links ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.filter-links li {
+    margin-left: 0 2rem; /* Space between the filter links */
+    position: relative;
+}
+
+.filter-links li:not(:last-child)::after {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    right: -0.8rem; /* Position to the right of the list item */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    height: 20px; /* Adjust height of the line */
+    width: 1px; /* Width of the line */
+    background-color: rgb(144, 144, 144); /* Line color */
+}
+
+.ABOUT {
+    font-size: 1.2rem;
+}
+
+/* Styles for the active page */
+.navbar ul li a.active {
+    color: white; /* Active link color */
+}
+
+.navbar ul li a:hover {
+    color: #ffffff;
+}
+
+/* Align right links */
+.right-links {
+    display: flex; /* Use flexbox for right links */
+    margin-left: auto; /* Push to the far right */
+    margin-right: 3.2rem;
+    list-style-type: none;
+}
+
+.right-links ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.right-links li {
+    margin-left: 1rem; /* Space between the right links */
+}
+
+.right-links li a {
+    color: rgb(144, 144, 144);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    list-style-type: none;
+}
+
+.right-links li a:hover{
+    color:#ffffff;
+}
+
+.current-page{
+    color:#ffffff;
+    font-size: 1rem;
+}
+
+/* Main content */
+main {
+    margin-top: 7.5rem; /* Add margin to prevent content from overlapping the navbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Portfolio Grid Styling */
+.content{
+    width:80%;
+    background-color: none;
+    height:80vh;
+    display:flex;
+    margin-left:10%;
+    margin-top:-15%;
+}
+
+.reading-list{
+    background-color: none;
+    height:20%;
+    width:27%;
+    margin-top:-12.2%;
+    margin-left:63%;
+}
+
+.reading-list .titles{
+    margin-top:2%;
+    color:white;
+}
+
+.INTRO{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    width:60%;
+    color:white;
+}
+
+.INTRO .CURRENTLY{
+    margin-top:5%;
+}
+
+.INTRO .CONTACT-INFO {
+    display: flex;
+    padding: 0.5rem 0;
+    margin-top:4.2%;
+}
+
+.CONTACT-INFO ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom:1rem;
+    display:flex;
+    gap:2rem;
+}
+
+.CONTACT-INFO li a {
+    color: rgb(144, 144, 144);
+    transition: color 0.3s ease;
+    font-size:1rem;
+}
+
+.CONTACT-INFO a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+.me-image{
+    width:40%;
+    height:100%;
+}
+
+.me-image img{
+    height:70%;
+    margin-left:16%;
+    transform: scale(1, 1) translateX(0%) translateY(0%) rotate(0);
+}

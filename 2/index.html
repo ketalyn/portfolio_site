@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AR WIKIBOOK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./main.css"> <!-- Add link to main.css -->
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-title">AR WIKIBOOK</div>
+        <div class="filter-links">
+            <ul>
+                <li><a href="../index.html?filter=all" class="filter-btn" data-filter="all">SELECTED</a></li>
+                <li><a href="../index.html?filter=category1" class="current-page filter-btn" data-filter="category1">PRINT</a></li>
+                <li><a href="../index.html?filter=category2" class="filter-btn" data-filter="category2">WEBSITES</a></li>
+                <li><a href="../index.html?filter=category3" class="filter-btn" data-filter="category3">3D</a></li>
+                <li><a href="../ARCHIVE/index.html">ARCHIVE</a></li>
+            </ul>
+        </div>        
+
+        <div class="right-links">
+            <li><span class="current-page">WORK</span></li>
+            <li><a href="../ABOUT/index.html" class="ABOUT">KATELYN LEE</a></li>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="hero-image">
+            <img src="./assets/allspreads.png" alt="Hero image">
+        </div>
+        <div class="heading">
+            <div class="TITLE"><p>INSIGHT: AR WIKIBOOK</p></div>
+            <div class="archiving">
+                <ul>
+                    <li><span class="label">YEAR:</span><span class="value"><br>2023</span></li>
+                    <li><span class="label">ROLE:</span><span class="value"><br>BOOK DESIGNER</span></li>
+                    <li><span class="label">SKILLS:</span><span class="value"><br>INDESIGN, BLENDER, BOOKBINDING, TEXT LAYOUT, TYPOGRAPHY, GRAPHIC DESIGN</span></li>
+                </ul>
+            </div>            
+        </div>
+        <div class="content">
+            <div class="project-story">
+                <p>
+                    The task was to take a lengthy Wikipedia page and compile the content into a book. I chose the 
+                    <a href="https://en.wikipedia.org/wiki/Augmented_reality" target="_blank" rel="noopener noreferrer" class="Wikipedia">page</a>
+                    on augmented reality and integrated AR elements to create a more interactive, engaging reading experience. 
+                    Assets were 3D rendered on Blender and made into filters on Instagram via Meta Spark Studios, interspersed at crucial points of the book to further enhance the content within.
+                </p>
+            </div>
+        
+            <div class="flipthrough">
+                <img src="./assets/spreads_animation.gif" alt="spreads flipthrough">
+            </div>
+        </div>
+
+        <div class="QR">
+            <div class="QR-guide">
+                <p>AR pages with QR codes featured below. Hover over the phones to see how they work, or try them out!
+                </p>
+            </div>
+            <div class="static-gallery">
+                <img src="./assets/frontcover.png" alt="Image 1" class="gallery-img">
+                <img src="./assets/backcover.png" alt="Image 2" class="gallery-img">
+                <img src="./assets/fullcover.png" alt="Image 3" class="gallery-img">
+                <img src="./assets/concerns.png" alt="Image 4" class="gallery-img">
+                <img src="./assets/development.png" alt="Image 5" class="gallery-img">
+                
+                <!-- Always visible controls -->
+                <div class="gallery-controls">
+                    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+                    <span class="next" onclick="changeImage(1)">&#10095;</span>
+                </div>
+            </div>
+
+            <div class="phones">
+                <div class="phone-container">
+                    <video class="video" muted>
+                        <source src="./assets/FRONTCOVER.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <img src="./assets/phone_frame.png" alt="Phone Frame" class="phone-frame">              
+                </div>
+                
+                <div class="phone-container">
+                    <video class="video" muted>
+                        <source src="./assets/TECHNOLOGY.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <img src="./assets/phone_frame.png" alt="Phone Frame" class="phone-frame">              
+                </div> 
+    
+                <div class="phone-container">
+                    <video class="video" muted>
+                        <source src="./assets/DEVELOPMENT.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <img src="./assets/phone_frame.png" alt="Phone Frame" class="phone-frame">              
+                </div>
+    
+                <div class="phone-container">
+                    <video class="video" muted>
+                        <source src="./assets/CONCERNS.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <img src="./assets/phone_frame.png" alt="Phone Frame" class="phone-frame">              
+                </div>
+            </div>
+        </div>
+
+        <!-- Spreads Grid -->
+        <div class="spreads-grid">
+            <div class="grid-item" data-index="0">
+                <img src="./assets/3.jpg" alt="spread 1">
+            </div>
+            <div class="grid-item" data-index="1">
+                <img src="./assets/13.jpg" alt="spread 2">
+            </div>
+            <div class="grid-item" data-index="2">
+                <img src="./assets/21.jpg" alt="spread 3">
+            </div>
+            <div class="grid-item" data-index="3">
+                <img src="./assets/46.jpg" alt="spread 4">
+            </div>
+        </div>
+
+        <div class="grid-directions">
+            <p>Selected spreads below.</p>
+        </div>
+
+        <div class="selected-spreads-grid">
+            <div class="selected-grid-item">
+                <img src="./assets/selected/15.jpg" alt="spread 1">
+            </div>
+            <div class="selected-grid-item">
+                <img src="./assets/selected/18.jpg" alt="spread 2">
+            </div>
+            <div class="selected-grid-item">
+                <img src="./assets/selected/22.jpg" alt="spread 3">
+            </div>
+            <div class="selected-grid-item">
+                <img src="./assets/selected/24.jpg" alt="spread 4">
+            </div>
+            <div class="selected-grid-item">
+                <img src="./assets/selected/26.jpg" alt="spread 5">
+            </div>
+            <div class="selected-grid-item">
+                <img src="./assets/selected/29.jpg" alt="spread 6">
+            </div>
+            <div class="selected-grid-item">
+                <img src="./assets/selected/30.jpg" alt="spread 7">
+            </div>
+            <div class="selected-grid-item">
+                <img src="./assets/selected/33.jpg" alt="spread 8">
+            </div>
+            <div class="selected-grid-item">
+                <img src="./assets/selected/35.jpg" alt="spread 9">
+            </div>
+            <div class="selected-grid-item">
+                <img src="./assets/selected/44.jpg" alt="spread 10">
+            </div>
+            <div class="selected-grid-item">
+                <img src="./assets/selected/46.jpg" alt="spread 11">
+            </div>
+            <div class="selected-grid-item">
+                <img src="./assets/selected/53.jpg" alt="spread 12">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal for the gallery -->
+    <div id="galleryModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>    
+
+<div class="footer">
+    <div class="connect-links">
+        <ul>
+            <li><a href="https://www.instagram.com/ketalyn.lee" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></li>
+            <li><a href="mailto:katelyn.lee010@gmail.com">EMAIL</a></li>
+            <li><a href="https://www.linkedin.com/in/katelyn-lee-5b85a5261" target="_blank">LINKEDIN</a></li>
+            <li><a href="../ABOUT/assets/Resume.pdf" target="_blank">RESUME</a></li>
+        </ul>
+    </div>
+
+    <p>Designed and coded by Katelyn Lee</p>
+    <P>Copyright © 2024 Katelyn Lee. All rights reserved.</P>
+</div>
+
+    <!-- Load your bundled JavaScript file -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HALMONI'S RECIPES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./main.css"> <!-- Add link to main.css -->
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-title">HALMONI'S RECIPES</div>
+        <div class="filter-links">
+            <ul>
+                <li><a href="../index.html?filter=all" class="filter-btn" data-filter="all">SELECTED</a></li>
+                <li><a href="../index.html?filter=category1" class="current-page filter-btn" data-filter="category1">PRINT</a></li>
+                <li><a href="../index.html?filter=category2" class="filter-btn" data-filter="category2">WEBSITES</a></li>
+                <li><a href="../index.html?filter=category3" class="filter-btn" data-filter="category3">3D</a></li>
+                <li><a href="../ARCHIVE/index.html">ARCHIVE</a></li>
+            </ul>
+        </div>        
+
+        <div class="right-links">
+            <li><span class="current-page">WORK</span></li>
+            <li><a href="../ABOUT/index.html" class="ABOUT">KATELYN LEE</a></li>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="hero-image">
+            <img src="./assets/hero_image.png" alt="Hero image">
+        </div>
+        <div class="heading">
+            <div class="TITLE"><p>HALMONI'S RECIPES</p></div>
+            <div class="archiving">
+                <ul>
+                    <li><span class="label">YEAR:</span><span class="value"><br>2022</span></li>
+                    <li><span class="label">ROLE:</span><span class="value"><br>DESIGNER, WRITER, ILLUSTRATOR</span></li>
+                    <li><span class="label">SKILLS:</span><span class="value"><br>INDESIGN, BOOK DESIGN, ILLUSTRATION, WRITER</span></li>
+                </ul>
+            </div>            
+        </div>
+        <div class="content">
+            <div class="project-story">
+                <p>This cookbook is defined by and born out of a desire to preserve the Korean dishes that shaped my childhood, and honor my grandmother.
+                    Two translations were involved in the making of this cookbook: Korean to English, and culinary measurements that come from a lifetime of cooking for others to standardized measurements so that these dishes are more easily replicable.
+                    The typeface used is my own handwriting, inspired by the traditional process of recording recipes on paper.
+                    All illustrations are hand drawn, and feature the staples of Korean cooking used in these recipes. 
+                </p>
+            </div>
+        
+            <div class="flipthrough">
+                <img src="./assets/spreads_animation.gif" alt="spreads flipthrough">
+            </div>
+        </div>
+
+        <div class="front-cover">
+            <img src="./assets/front_cover.png" alt="frontcover">
+        </div>
+        <div class="spread-5">
+            <img src="./assets/5.png" alt="spread-5">
+        </div>
+
+        <div class="grid-directions">
+            <p>Click to examine recipes closer</p>
+        </div>
+        <div class="arrow"><img src="./assets/arrow.png" alt="arrow"></div>
+
+        <!-- Spreads Grid -->
+        <div class="spreads-grid">
+            <div class="grid-item" data-index="0">
+                <img src="./assets/1.png" alt="spread 1">
+            </div>
+            <div class="grid-item" data-index="1">
+                <img src="./assets/2.png" alt="spread 2">
+            </div>
+            <div class="grid-item" data-index="2">
+                <img src="./assets/3.png" alt="spread 3">
+            </div>
+            <div class="grid-item" data-index="3">
+                <img src="./assets/4.png" alt="spread 4">
+            </div>
+            <div class="grid-item" data-index="4">
+                <img src="./assets/5.png" alt="spread 5">
+            </div>
+            <div class="grid-item" data-index="5">
+                <img src="./assets/6.png" alt="spread 6">
+            </div>
+            <div class="grid-item" data-index="6">
+                <img src="./assets/7.png" alt="spread 7">
+            </div>
+            <div class="grid-item" data-index="7">
+                <img src="./assets/8.png" alt="spread 8">
+            </div>
+            <div class="grid-item" data-index="8">
+                <img src="./assets/9.png" alt="spread 9">
+            </div>
+            <div class="grid-item" data-index="9">
+                <img src="./assets/10.png" alt="spread 10">
+            </div>
+            <div class="grid-item" data-index="10">
+                <img src="./assets/11.png" alt="spread 11">
+            </div>
+            <div class="grid-item" data-index="11">
+                <img src="./assets/12.png" alt="spread 12">
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for the gallery -->
+    <div id="galleryModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-nav">
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+        </div>
+    </div>
+
+<div class="footer">
+    <div class="connect-links">
+        <ul>
+            <li><a href="https://www.instagram.com/ketalyn.lee" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></li>
+            <li><a href="mailto:katelyn.lee010@gmail.com">EMAIL</a></li>
+            <li><a href="https://www.linkedin.com/in/katelyn-lee-5b85a5261" target="_blank">LINKEDIN</a></li>
+            <li><a href="../ABOUT/assets/Resume.pdf" target="_blank">RESUME</a></li>
+        </ul>
+    </div>
+
+    <p>Designed and coded by Katelyn Lee</p>
+    <P>Copyright © 2024 Katelyn Lee. All rights reserved.</P>
+</div>
+
+    <!-- Load your bundled JavaScript file -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

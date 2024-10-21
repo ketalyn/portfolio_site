@@ -1,0 +1,1071 @@
+@font-face {
+    font-family: 'MyFont'; /* Give your font a name */
+    src: url('./assets/Myfont-Regular.otf') format('otf'),
+         url('./assets/Myfont-Regular.ttf') format('ttf'); /* Add other formats if available */
+    font-weight: normal; /* Specify the font weight (normal, bold, etc.) */
+    font-style: normal; /* Specify the font style (normal, italic, etc.) */
+}
+
+
+/* General body styling */
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    color: rgb(144, 144, 144);
+    padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+    z-index: 1000; /* Ensure the navbar stays on top */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out the items */
+}
+
+.navbar-title{
+    color: rgb(144, 144, 144);
+    font-size: 1rem;
+    display: flex; /* Use flexbox for right links */
+    margin-right: auto; /* Push to the far right */
+    margin-left: 1.5rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    color: rgb(144, 144, 144);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin-left:-1rem;
+}
+
+.navbar ul li a:hover {
+    color:#ffffff;
+}
+
+/* Center filter links */
+.filter-btn {
+    flex-grow: 1; /* Allow this section to grow and take remaining space */
+    display: flex; /* Use flexbox for alignment */
+    margin-left: 3%;
+    justify-content: center; /* Center items horizontally */
+}
+
+.filter-btn ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.filter-links li {
+    margin-left: 0 0rem; /* Space between the filter links */
+    position: relative;
+}
+
+.filter-links ul li a{
+    margin-left:0rem;
+}
+
+.filter-links .current-page{
+    color:#ffffff;
+    font-size: 1rem;
+}
+
+.filter-links li:not(:last-child)::after {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    right: -0.8rem; /* Position to the right of the list item */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    height: 20px; /* Adjust height of the line */
+    width: 1px; /* Width of the line */
+    background-color: rgb(144, 144, 144); /* Line color */
+}
+
+.ABOUT {
+    font-size: 1.2rem;
+}
+
+/* Styles for the active page */
+.navbar ul li a.active {
+    color: white; /* Active link color */
+}
+
+.navbar ul li a:hover {
+    color: #ffffff;
+}
+
+/* Align right links */
+.right-links {
+    display: flex; /* Use flexbox for right links */
+    margin-left: auto; /* Push to the far right */
+    margin-right: 3.2rem;
+    list-style-type: none;
+}
+
+.right-links ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.right-links li {
+    margin-left: 1rem; /* Space between the right links */
+}
+
+.right-links li a {
+    color: rgb(144, 144, 144);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    list-style-type: none;
+}
+
+.right-links li a:hover{
+    color:#ffffff;
+}
+
+.current-page{
+    color:#ffffff;
+    font-size: 1rem;
+}
+
+/* Main content */
+main {
+    position: relative; /* This allows absolute positioning for child elements */
+    margin-top: 4.5rem; 
+    display: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    height: 40vh;
+    background-color:none;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.hero-image {
+    background-color: #ffffff;
+    width: 100%; /* Full width */
+    height: 20rem; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    overflow: hidden; /* Hide overflow */
+}
+
+.hero-image img {
+    max-width: 100%; /* Limit image width to container's width */
+    max-height: 100%; /* Limit image height to container's height */
+    width: 100%; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.heading{
+    display:flex;
+    height:10%;
+}
+
+.TITLE{
+    color:#ffffff;
+    background-color: none;
+    font-size: 4rem;
+    text-align: left;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+    width:50%;
+}
+
+.TITLE p{
+    margin-top:-0.5rem;
+    margin-bottom:2.5rem;
+}
+
+.archiving {
+    background-color: none;
+    text-decoration: none;
+    width: 40%;
+    margin-left: 5%;
+}
+
+.archiving ul {
+    list-style-type: none !important; /* Use !important to ensure it overrides any other styles */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for layout */
+}
+
+.archiving ul li {
+    margin: 0 4rem;
+    margin-top: 2rem;
+    margin-left: 0rem;
+    background-color: none;
+    width: 15rem;
+    color: rgb(144, 144, 144); /* This is for the labels */
+}
+
+.archiving ul li:last-child {
+    margin-right: 0; /* Correct syntax for the last-child pseudo-class */
+}
+
+.archiving ul li a {
+    color: rgb(144, 144, 144);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-left: -1rem;
+}
+
+.archiving .value {
+    color: white; /* Set the color of the values to white */
+}
+
+.archiving .label {
+    color: rgb(144, 144, 144); /* Keep the label color as is */
+}
+
+
+.project-story{
+    background-color: none;
+    color:white;
+    width:49%;
+    height: 40vh;
+    margin-left: 2.5rem;
+    margin-top: 1rem;
+}
+
+.project-story p{
+    margin-top:0;
+}
+
+.QR{
+    display:flex;
+    flex-direction: space-between;
+    width:94.8%;
+    height:30vh;
+    margin-left:2.8%;
+    margin-right:2.8%;
+    margin-top:4%;
+    margin-bottom:4%;
+    background-color: none;
+}
+
+/* Style for the static gallery */
+.static-gallery {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42%;
+    height:70vh;
+    overflow: hidden;
+    background-color: pink;
+    padding: 0;
+    margin-top: -24.2%;
+    margin-left:auto;
+    margin-right:0;
+}
+
+/* Adjust the images */
+.static-gallery .gallery-img {
+    max-width: 80%; /* Adjust size as needed */
+    margin: 0 1rem;
+    margin-top:0%;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    display: none; /* Hide all images initially */
+}
+
+/* Class for the visible (active) image */
+.static-gallery .gallery-img.active {
+    display: block; /* Show the active image */
+}
+
+/* Controls for next and previous buttons */
+.gallery-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.gallery-controls .prev,
+.gallery-controls .next {
+    pointer-events: all;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal img {
+    max-width: 80%; /* Max width of the image */
+    max-height: 90%; /* Max height of the image */
+    margin-top: 3%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 60%;
+    max-width: 700px;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px; /* Ensures some padding on the sides */
+}
+
+.prev, .next {
+    cursor: pointer; /* Ensure the cursor shows as a pointer */
+    z-index: 1002; /* Keep this high enough to be on top */
+    pointer-events: auto; /* Make sure pointer events are enabled */
+}
+
+.prev {
+    position: absolute;
+    left: 20px; /* Move to the left side */
+}
+
+.next {
+    position: absolute;
+    right: 20px; /* Move to the right side */
+}
+
+.prev:hover, .next:hover {
+    color: #bbb; /* Lighter color on hover */
+    cursor: pointer;
+}
+
+.grid-directions{
+    color:#ffffff;
+    font-size: 2rem;
+    margin-left:2.8%;
+}
+
+.footer {
+    height: 10rem;
+    width: 100%;
+    background-color: rgb(99, 49, 49);
+    bottom: 0;
+    margin-top: 0;
+    color: rgb(144, 144, 144);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect-links {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.connect-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem; /* Use gap for spacing */
+}
+
+.connect-links li a {
+    color: rgb(144, 144, 144);
+    transition: color 0.3s ease;
+}
+
+.connect-links li a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }    
+    
+    body {
+        margin: 0;
+        padding: 0;
+        width:100%;
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+        margin-left: 0;
+        margin-right: 0;
+        background-color:#000000;
+        width:100%;
+    }
+
+    .navbar-title{
+        color: rgb(144, 144, 144);
+        font-size: 1rem;
+        display: flex; /* Use flexbox for right links */
+        margin-right: auto; /* Push to the far right */
+        margin-left: 1.2rem;
+    }
+
+    /* Hide all filter links except the one with the 'current-page' class */
+    .filter-links {
+        display: none; /* Hide the filter links initially */
+        text-align:center;
+    }
+
+    .right-links {
+        margin-left: 2rem; /* Push to the far right */
+        margin-right: 1.2rem;
+        list-style-type: none;
+    }
+    
+    .right-links ul {
+        margin-left: 0; /* Remove default margin */
+        margin-right:0;
+        padding: 0; /* Remove default padding */
+        display: flex; /* Keep the ul as a flex container */
+    }
+    
+    .right-links li {
+        margin-left: 1.4rem; /* Space between the right links */
+    }
+    
+    .right-links li a {
+        color: rgb(144, 144, 144);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+        list-style-type: none;
+    }
+    
+    .right-links li a:hover {
+        color: #ffffff;
+    }
+
+    .main{
+        width:100%;
+    }
+
+    .content{
+        width: 100%;
+        height: 32vh;
+        background-color:none;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-image {
+        width: 100%; /* Ensure full width */
+        height:30vh;
+        max-width: 100%; /* Prevent overflow */
+        margin: 0 auto; /* Center if needed */
+        overflow: hidden; /* Hide overflow */
+        background-color: blanchedalmond;
+    }
+    
+    .hero-image img {
+        width: 100%; /* Scale to fit */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Prevent bottom margin from images */
+        object-fit:cover;
+        transform: scale(2); /* Scale up by 10% */
+    }
+
+    .heading{
+        display:flex;
+        flex-direction: column;
+        height:10%;
+    }
+
+    .TITLE{
+        color:#ffffff;
+        background-color: none;
+        font-size: 3rem;
+        text-align: left;
+        margin-top: 0rem;
+        margin-left: 2rem;
+        width:100%;
+    }
+    
+    .TITLE p{
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }
+    
+    .archiving {
+        background-color:none ;
+        text-decoration: none;
+        font-size:0.8rem;
+        width: 84%;
+        margin-left: 8%;
+        margin-right:8%;
+        margin-bottom:3%;
+    }
+    
+    .archiving ul {
+        list-style-type: none !important; /* Use !important to ensure it overrides any other styles */
+        margin: 0;
+        padding: 0;
+        display: flex; /* Flexbox for layout */
+    }
+    
+    .archiving ul li {
+        margin: 0 4rem;
+        margin-top: 0rem;
+        margin-left: 0rem;
+        background-color: none;
+        width: 15rem;
+        color: rgb(144, 144, 144); /* This is for the labels */
+    }
+    
+    .archiving ul li:last-child {
+        margin-right: 0; /* Correct syntax for the last-child pseudo-class */
+    }
+    
+    .archiving ul li a {
+        color: rgb(144, 144, 144);
+        font-size: 0.8rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        margin-left: -1rem;
+    }
+     
+    .project-story{
+        background-color: none;
+        color:white;
+        width:84%;
+        height: 30vh;
+        margin-left: 2.5rem;
+        margin-right:2.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .project-story p{
+        margin-top:0;
+        font-size: 0.85rem;
+    }
+    
+    .QR{
+        display:flex;
+        flex-direction: column;
+        align-items: center; /* Aligns items in the center of the container */
+        justify-content: flex-start;
+        width:94.8%;
+        height:30vh;
+        margin-left:2rem;
+        margin-right:2.8%;
+        margin-top:0%;
+        margin-bottom:0%;
+        background-color: none;
+    }
+
+    .static-gallery {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 86%;
+        height:27vh;
+        overflow: hidden;
+        padding: 0;
+        margin-top: -40%;
+        margin-left:-10%;
+        margin-right:0%;
+    }
+    
+    /* Adjust the images */
+    .static-gallery .gallery-img {
+        max-width: 100%; /* Adjust size as needed */
+        margin: 0rem;
+        margin-top:0%;
+        transition: transform 0.3s ease;
+        display: none; /* Hide all images initially */
+    }
+    
+    /* Controls for next and previous buttons */
+    .gallery-controls {
+        position: absolute;
+        top: 60%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    /* The Modal (background) */
+.modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal img {
+    max-width: 100%; /* Max width of the image */
+    max-height: 100%; /* Max height of the image */
+    margin-top:15%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+}
+
+/* Modal Image */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Adjust modal-nav for proper alignment */
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px; /* Ensures some padding on the sides */
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 50px; /* Larger arrow icons */
+    color: white;
+    user-select: none; /* Prevent selection */
+}
+
+.prev {
+    position: absolute;
+    left: 20px; /* Move to the left side */
+}
+
+.next {
+    position: absolute;
+    right: 20px; /* Move to the right side */
+}
+
+.prev:hover, .next:hover {
+    color: #bbb; /* Lighter color on hover */
+}
+
+.selected-spreads-grid{
+    display:none;
+}
+
+.footer {
+    height: 10rem;
+    width: 100%;
+    background-color: rgb(99, 49, 49);
+    bottom: 0;
+    margin-top: -10rem;
+    color: rgb(144, 144, 144);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }    
+    
+    body {
+        margin: 0;
+        padding: 0;
+        width:100%;
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+        margin-left: 0;
+        margin-right: 0;
+        background-color:#000000;
+        width:100%;
+    }
+
+    .navbar-title{
+        color: rgb(144, 144, 144);
+        font-size: 1rem;
+        display: flex; /* Use flexbox for right links */
+        margin-right: auto; /* Push to the far right */
+        margin-left: 1rem;
+    }
+
+    /* Hide all filter links except the one with the 'current-page' class */
+    .filter-links {
+        display: none; /* Hide the filter links initially */
+        text-align:center;
+    }
+
+    .right-links {
+        margin-left: 0; /* Push to the far right */
+        margin-right: 1.8rem;
+        list-style-type: none;
+    }
+    
+    .right-links ul {
+        margin-left: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        display: flex; /* Keep the ul as a flex container */
+    }
+    
+    .right-links li {
+        margin-left: 1.5rem; /* Space between the right links */
+    }
+    
+    .right-links li a {
+        color: rgb(144, 144, 144);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+        list-style-type: none;
+    }
+    
+    .right-links li a:hover {
+        color: #ffffff;
+    }
+
+    .main{
+        width:100%;
+    }
+
+    .content{
+        width: 100%;
+        height: 22vh;
+        background-color:none;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-image {
+        width: 100%; /* Ensure full width */
+        height:30vh;
+        max-width: 100%; /* Prevent overflow */
+        margin: 0 auto; /* Center if needed */
+        overflow: hidden; /* Hide overflow */
+        background-color: blanchedalmond;
+    }
+    
+    .hero-image img {
+        width: 100%; /* Scale to fit */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Prevent bottom margin from images */
+        object-fit:cover;
+    }
+
+    .heading{
+        display:flex;
+        flex-direction: column;
+        height:10%;
+        width:96%;
+    }
+
+    .TITLE{
+        color:#ffffff;
+        background-color: none;
+        font-size: 3rem;
+        text-align: left;
+        margin-top: 0rem;
+        margin-left: 1.8rem;
+        width:100%;
+    }
+    
+    .TITLE p{
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }
+    
+    .archiving {
+        background-color:none ;
+        text-decoration: none;
+        font-size:0.8rem;
+        width: 96%;
+        margin-left: 2rem;
+        margin-right:2rem;
+        margin-bottom:3%;
+    }
+    
+    .archiving ul {
+        list-style-type: none !important; /* Use !important to ensure it overrides any other styles */
+        margin: 0;
+        padding: 0;
+        display: flex; /* Flexbox for layout */
+    }
+    
+    .archiving ul li {
+        margin: 0 4rem;
+        margin-top: 0rem;
+        margin-left: 0rem;
+        background-color: none;
+        width: 15rem;
+        color: rgb(144, 144, 144); /* This is for the labels */
+    }
+    
+    .archiving ul li:last-child {
+        margin-right: 0; /* Correct syntax for the last-child pseudo-class */
+    }
+    
+    .archiving ul li a {
+        color: rgb(144, 144, 144);
+        font-size: 0.8rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        margin-left: -1rem;
+    }
+     
+    .project-story{
+        background-color: none;
+        color:white;
+        width:92%;
+        height: 30vh;
+        margin-left: 2rem;
+        margin-right:2rem;
+        margin-top: 0.5rem;
+    }
+    
+    .project-story p{
+        margin-top:0;
+        font-size: 0.85rem;
+    }
+
+    .QR{
+        display:flex;
+        flex-direction: space-between;
+        width:92%;
+        height:38vh;
+        margin-left:2rem;
+        margin-right:2rem;
+        margin-top:-10%;
+        margin-bottom:14%;
+        background-color: none;
+    }
+    
+    /* Style for the static gallery */
+    .static-gallery {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height:110%;
+        overflow: hidden;
+        background-color: none;
+        padding: 0;
+        margin-top: 0%;
+        margin-left:auto;
+        margin-right:2%;
+    }
+    
+    /* Adjust the images */
+    .static-gallery .gallery-img {
+        max-width: 100%; /* Adjust size as needed */
+        margin: 0 1rem;
+        margin-top:0;
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+        display: none; /* Hide all images initially */
+    }
+
+    /* The Modal (background) */
+.modal {
+    display: none; /* Hide by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal img {
+    max-width: 100%; /* Max width of the image */
+    max-height: 100%; /* Max height of the image */
+    margin-top:15%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+}
+
+/* Modal Image */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Adjust modal-nav for proper alignment */
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px; /* Ensures some padding on the sides */
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 50px; /* Larger arrow icons */
+    color: white;
+    user-select: none; /* Prevent selection */
+}
+
+.prev {
+    position: absolute;
+    left: 20px; /* Move to the left side */
+}
+
+.next {
+    position: absolute;
+    right: 20px; /* Move to the right side */
+}
+
+.prev:hover, .next:hover {
+    color: #bbb; /* Lighter color on hover */
+}
+}

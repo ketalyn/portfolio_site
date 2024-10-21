@@ -1,0 +1,528 @@
+/* General body styling */
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+.toggle-filter-btn{
+    display:none;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    color: rgb(144, 144, 144);
+    padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+    z-index: 1000; /* Ensure the navbar stays on top */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out the items */
+}
+
+.navbar .clock {
+    color: rgb(144, 144, 144);
+    font-size: 1rem;
+    display: flex; /* Use flexbox for right links */
+    margin-right: auto; /* Push to the far right */
+    margin-left: 1.2rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.navbar ul li {
+    margin: 0 1.2rem;
+}
+
+.navbar ul li a {
+    color: rgb(144, 144, 144);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin-left:-1rem;
+}
+
+.navbar ul li a:hover {
+    color:#ffffff;
+}
+
+/* Center filter links */
+.filter-links {
+    flex-grow: 1; /* Allow this section to grow and take remaining space */
+    display: flex; /* Use flexbox for alignment */
+    margin-left: 10%;
+    justify-content: center; /* Center items horizontally */
+}
+
+.filter-links ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.filter-links li {
+    margin-left: 0 2rem; /* Space between the filter links */
+    position: relative;
+}
+
+.filter-links li:not(:last-child)::after {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    right: -0.8rem; /* Position to the right of the list item */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    height: 20px; /* Adjust height of the line */
+    width: 1px; /* Width of the line */
+    background-color: rgb(144, 144, 144); /* Line color */
+}
+
+.ABOUT {
+    font-size: 1.2rem;
+}
+
+/* Styles for the active page */
+.navbar ul li a.active {
+    color: white; /* Active link color */
+}
+
+.navbar ul li a:hover {
+    color: #ffffff;
+}
+
+/* Align right links */
+.right-links {
+    display: flex; /* Use flexbox for right links */
+    margin-left: auto; /* Push to the far right */
+    margin-right: 3.2rem;
+    list-style-type: none;
+}
+
+.right-links ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Keep the ul as a flex container */
+}
+
+.right-links li {
+    margin-left: 1rem; /* Space between the right links */
+}
+
+.right-links li a {
+    color: rgb(144, 144, 144);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    list-style-type: none;
+}
+
+.right-links li a:hover{
+    color:#ffffff;
+}
+
+.current-page{
+    color:#ffffff;
+    font-size: 1rem;
+}
+
+/* Main content */
+main {
+    margin-top: 7.5rem; /* Add margin to prevent content from overlapping the navbar */
+    margin-bottom:7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.HI{
+    width:88%;
+    height:100%;
+background-color: none;
+margin-left:5%;
+    font-size:2rem;
+    color:white;
+}
+
+.HI .CURRENTLY{
+    font-size:1rem;
+    margin-top:0.5rem;
+}
+
+.HI .CURRENTLY .PDF{
+    font-size:0.8rem;
+}
+
+.portfolio-grid .grid-item:nth-child(1){
+    background-color: #000000;
+}
+
+/* Portfolio Grid Styling */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 95vw;
+    max-width: 200vw;
+}
+
+.grid-item {
+    background-color: #ffffff; /* Background color */
+    height:17rem;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures content, like the overlay, stays inside */
+    position: relative; /* Important for positioning the overlay */
+    transition: transform 0.3s ease; /* Transition for hover effects */
+}
+
+.grid-item.hidden {
+    display: none;
+}
+
+.grid-item:hover {
+    background-color: none;
+}
+
+.grid-image {
+    max-width: 200%; /* Ensures the image scales properly */
+    height: 35rem; /* Maintain aspect ratio */
+    display: block; /* Prevents bottom space issue */
+    border-radius: 10px; /* Matches the border radius of the grid item */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-top: -10%; /* Adjust to move the image up */
+    transform: translateX(-20%) rotate(12deg); /* Adjust rotate angle as needed */
+}
+
+.portfolio-grid .grid-item:nth-child(4) .grid-image {
+    transform: scale(0.5, 0.5) translateX(-50%) translateY(-35%) rotate(0);
+}
+
+.portfolio-grid .grid-item:nth-child(6) .grid-image {
+    transform: scale(0.6, 0.6) translateX(-35%) translateY(-30%) rotate(0);
+}
+
+.portfolio-grid .grid-item:nth-child(8) .grid-image {
+    transform: scale(0.8, 0.8) translateX(-30%) translateY(-20%) rotate(0);
+}
+
+.overlay {
+    position: absolute; /* Position overlay */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    bottom: 0; /* Stretch to the bottom */
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center the title vertically */
+    align-items: center; /* Align items to the left */
+    opacity: 0; /* Hide overlay by default */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.grid-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.title {
+    color: #ffffff; /* Title color */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    text-align: center; /* Align text to the left */
+    margin: 0; /* Remove margin */
+}
+
+.tag {
+    color: white; /* Different color for tag */
+    font-size: 1rem; /* Slightly smaller font size */
+    margin-bottom: 0.5rem; /* Space below the tag */
+}
+
+.footer {
+    height: 10rem;
+    width: 100%;
+    background-color: black;
+    bottom: 0;
+    margin-top: 2rem;
+    color: rgb(144, 144, 144);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect-links {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.connect-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem; /* Use gap for spacing */
+}
+
+.connect-links li a {
+    color: rgb(144, 144, 144);
+    transition: color 0.3s ease;
+}
+
+.connect-links li a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+        margin-left: 0;
+        margin-right: 0;
+        background-color:#000000;
+    }
+
+    .navbar .clock {
+        font-size: 1.1rem;
+        display: flex; /* Use flexbox for right links */
+        margin-right: 0rem; /* Push to the far right */
+        margin-left: 0;
+        margin-top: 0rem;
+    }
+
+    .filter-links {
+        display: none; /* Hide the filter links initially */
+        flex-direction: column; /* Stack them vertically */
+        position: fixed; /* Make it fixed to take the whole page */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 90%; /* Full height */
+        margin-left: 0;
+        margin-top: 3.4rem;
+        background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent background */
+        color: white; /* Text color */
+        padding: 2rem; /* Add padding */
+        z-index: 999; /* Ensure it stays on top */
+        overflow-y: auto; /* Allow scrolling if content is long */
+    }
+    
+    .filter-links ul {
+        display: flex; /* Keep the ul as a flex container */
+        flex-direction: column; /* Stack items in a column */
+        gap: 1rem;
+    }
+    
+    .filter-links li {
+        margin: 0 1rem; /* Space between the filter links */
+    }
+
+    .right-links {
+        margin-left: 0; /* Push to the far right */
+        margin-right: 2rem;
+        list-style-type: none;
+    }
+    
+    .right-links ul {
+        margin-left: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        display: flex; /* Keep the ul as a flex container */
+    }
+    
+    .right-links li {
+        margin-left: 1.5rem; /* Space between the right links */
+    }
+    
+    .right-links li a {
+        color: rgb(144, 144, 144);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+        list-style-type: none;
+    }
+    
+    .right-links li a:hover {
+        color: #ffffff;
+    }
+    
+    /* Style for the toggle button */
+    .toggle-filter-btn {
+        display: block;
+        background-color: transparent; /* Transparent background */
+        border: none; /* No border */
+        color: rgb(144, 144, 144); /* Color to match the navbar */
+        font-size: 2rem; /* Size of the button */
+        cursor: pointer; /* Pointer cursor on hover */
+        margin-left: auto; /* Align to the right */
+        margin-right: 0.5rem; /* Space from the right edge */
+        margin-top: 0;
+        transition: transform 0.3s ease; /* Transition for smooth rotation */
+    }
+    
+    .toggle-filter-btn.active {
+        transform: rotate(45deg); /* Rotate to form an "X" */
+        color: #ffffff; /* Change color when active */
+    }
+    
+    .portfolio-grid {
+        display: flex; /* Change to flex layout */
+        flex-direction: column; /* Stack items in a column */
+        margin-top:220vh;
+        width: 95vw; /* Adjust width */
+        max-width: 200vw; /* Max width */
+        gap: 1.5rem; /* Space between grid items */
+    }
+    
+    .grid-item {
+        background-color: #ffffff;
+        padding: 20px;
+        height: 15rem; /* Maintain item height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .footer{
+        margin-top:230vh;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+        margin-left: 0;
+        margin-right: 0;
+        background-color:#000000;
+    }
+
+    .navbar .clock {
+        font-size: 1.1rem;
+        display: flex; /* Use flexbox for right links */
+        margin-right: 0rem; /* Push to the far right */
+        margin-left: 0;
+        margin-top: 0rem;
+    }
+
+    .filter-links {
+        display: none; /* Hide the filter links initially */
+        flex-direction: column; /* Stack them vertically */
+        position: fixed; /* Make it fixed to take the whole page */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 90%; /* Full height */
+        margin-left: 0;
+        margin-top: 3.4rem;
+        background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent background */
+        color: white; /* Text color */
+        padding: 2rem; /* Add padding */
+        z-index: 999; /* Ensure it stays on top */
+        overflow-y: auto; /* Allow scrolling if content is long */
+    }
+    
+    .filter-links ul {
+        display: flex; /* Keep the ul as a flex container */
+        flex-direction: column; /* Stack items in a column */
+        gap: 1rem;
+    }
+    
+    .filter-links li {
+        margin: 0 1rem; /* Space between the filter links */
+    }
+
+    .right-links {
+        margin-left: 0; /* Push to the far right */
+        margin-right: 2rem;
+        list-style-type: none;
+    }
+    
+    .right-links ul {
+        margin-left: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        display: flex; /* Keep the ul as a flex container */
+    }
+    
+    .right-links li {
+        margin-left: 1.5rem; /* Space between the right links */
+    }
+    
+    .right-links li a {
+        color: rgb(144, 144, 144);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+        list-style-type: none;
+    }
+    
+    .right-links li a:hover {
+        color: #ffffff;
+    }
+    
+    /* Style for the toggle button */
+    .toggle-filter-btn {
+        display: block;
+        background-color: transparent; /* Transparent background */
+        border: none; /* No border */
+        color: rgb(144, 144, 144); /* Color to match the navbar */
+        font-size: 2rem; /* Size of the button */
+        cursor: pointer; /* Pointer cursor on hover */
+        margin-left: auto; /* Align to the right */
+        margin-right: 0.5rem; /* Space from the right edge */
+        margin-top: 0;
+        transition: transform 0.3s ease; /* Transition for smooth rotation */
+    }
+    
+    .toggle-filter-btn.active {
+        transform: rotate(45deg); /* Rotate to form an "X" */
+        color: #ffffff; /* Change color when active */
+    }
+    
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 1.5rem;
+        width: 95vw;
+        margin-top:35vh;
+        max-width: 200vw;
+    }
+    
+    .grid-item {
+        background-color: #ffffff;
+        padding: 20px;
+        height: 11.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .footer{
+        margin-top:50vh;
+    }
+}

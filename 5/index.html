@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>THINGS THAT MOVE AND DON'T MOVE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./main.css"> <!-- Add link to main.css -->
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-title">THINGS THAT MOVE AND DON'T MOVE</div>
+        <div class="filter-links">
+            <ul>
+                <li><a href="../index.html?filter=all" class="filter-btn" data-filter="all">SELECTED</a></li>
+                <li><a href="../index.html?filter=category1" class="filter-btn" data-filter="category1">PRINT</a></li>
+                <li><a href="../index.html?filter=category1" class="current-page filter-btn" data-filter="category2">WEBSITES</a></li>
+                <li><a href="../index.html?filter=category3" class="filter-btn" data-filter="category3">3D</a></li>
+                <li><a href="../ARCHIVE/index.html">ARCHIVE</a></li>
+            </ul>
+        </div>        
+
+        <div class="right-links">
+            <li><span class="current-page">WORK</span></li>
+            <li><a href="../ABOUT/index.html" class="ABOUT">KATELYN LEE</a></li>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="hero-image">
+            <img src="./assets/hero-image.png" alt="Hero image">
+        </div>
+        <div class="heading">
+            <div class="TITLE"><p>THINGS THAT MOVE AND DON'T MOVE</p></div>
+            <div class="archiving">
+                <ul>
+                    <li><span class="label">YEAR:</span><span class="value"><br>2024</span></li>
+                    <li><span class="label">ROLE:</span><span class="value"><br>WEB DESIGNER / DEVELOPER</span></li>
+                    <li><span class="label">SKILLS:</span><span class="value"><br>HTML, CSS, JS</span></li>
+                </ul>
+            </div>            
+        </div>
+        <div class="content">
+            <div class="project-story">
+                An archival site of 3D-renders of objects in my bedroom. 
+                Items are characterized and categorized by color, material, and whether of not they "move" or "don't move".
+                Originated from noticing that objects left primarily untouched in everyday use in my room have unspoken locations.
+                </p>
+
+                <div class="website-link">
+                    <br><br>
+                    <p>Take a look here!</p>
+                    <ul> <!-- Added unordered list -->
+                        <li><a href="https://ketalyn.github.io/archivev2/" target="_blank" rel="noopener noreferrer">https://ketalyn.github.io/archivev2/</a></li>
+                    </ul> <!-- End of unordered list -->
+                    <p>
+                </div>
+            </div>
+        
+            <div class="flipthrough">
+                <img src="./assets/laptop_library.png" alt="spreads flipthrough">
+                <video autoplay muted loop class="overlay-video">
+                    <source src="./assets/homepage.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+        </div>        
+
+        <div class="QR">
+            <div class="static-gallery">
+                <img src="./assets/mobile.png" alt="mobile" class="gallery-img">
+                <img src="./assets/phone_frame.png" alt="phone frame" class="overlay-phone">
+            </div>
+
+            <div class="phones">
+                <div class="phone-container">
+                    <img src="./assets/the universe.gif" alt="the universe" class="the universe">              
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal for the gallery -->
+    <div id="galleryModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>    
+
+<div class="footer">
+    <div class="connect-links">
+        <ul>
+            <li><a href="https://www.instagram.com/ketalyn.lee" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></li>
+            <li><a href="mailto:katelyn.lee010@gmail.com">EMAIL</a></li>
+            <li><a href="https://www.linkedin.com/in/katelyn-lee-5b85a5261" target="_blank">LINKEDIN</a></li>
+            <li><a href="../ABOUT/assets/Resume.pdf" target="_blank">RESUME</a></li>
+        </ul>
+    </div>
+
+    <p>Designed and coded by Katelyn Lee</p>
+    <P>Copyright © 2024 Katelyn Lee. All rights reserved.</P>
+</div>
+
+    <!-- Load your bundled JavaScript file -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>
